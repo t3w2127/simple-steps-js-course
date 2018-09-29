@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+</head>
+<body>
+
+<div style="padding-bottom: 30px;"><p>Just called to say:</p>
+	<p><div id="output"></div></p>
+</div>
+
+<div style="padding-bottom: 30px;"><p>Hey there:</p>
+	<p><div id="name"></div></p>
+</div>
+
+<div style="padding-bottom: 30px;"><p>Just called to say:</p>
+	<p><div id="output2"></div></p>
+</div>
+
+<div style="padding-bottom: 30px;"><p>What color is your shirt?</p>
+	<p><div id="shirt-color"></div></p>
+</div>
+
+<div style="padding-bottom: 30px;"><p>The color of my shirt is <div id="shirt-color2"</div></p>
+</div>
+
+<div style="padding-bottom: 30px;"><p>What is the sum of these two numnbers:</p>
+	<p>30 + 10 = <div id="sum1"></div></p>
+</div>
+
+<div style="padding-bottom: 30px;"><p>The total product of 10 times 10 times 30 is this:</p>
+	<p><div id="output3"></div></p>
+</div>
+
+<!-- Greet practice scripts -->
+
+
+<script>
+function greet(){
+	console.log('Hi');
+}
+greet();
+</script>
+
+<script>
+function greet(){
+	console.log('Hi');
+}
+greet();
+</script>
+
+<script>
+function greet(){
+	console.log("Hi");
+}
+greet();
+</script>
+
+<script>
+function greet(){
+	console.log('Hi');
+}
+greet();
+</script>
+
+<script>
+function greet(){
+	console.log('Hi');
+}
+greet();
+</script>'
+
+<script>
+function greet(){
+	console.log('Hi!!');
+}
+greet();
+</script>
+
+<script>
+function greet (){
+	console.log('\'Sup');
+}
+greet();
+</script>
+
+<script>
+function greet(){
+	console.log('Hey you chillin\'?')
+}
+greet();
+</script>
+<script>
+function greet(){
+	console.log('Howdy partner!');
+}
+greet();
+</script>
+<script>
+function greet(){
+	console.log('Hey man, what is happening, yo?');
+}
+greet();
+</script>
+<script>
+function greet(){
+console.log('Hey man, I hope you\'re well!');
+}
+greet();
+</script>
+
+<!-- Showing a greeting in a div -->
+
+<script>
+function greet(){
+	var message = 'Hey man how\'s it going?';
+	return message;
+}
+document.getElementById('output').innerHTML = greet();
+</script>
+
+<!-- Writing greet script 15 times-->
+
+<script>
+function greet(name){
+	console.log('Hi ' + name );
+}
+greet('Mario');
+greet('Luigi');
+</script>
+<script>
+function greet(name){
+	console.log('Hello ' + name);
+}
+greet('John');
+greet('Andrea');
+</script>
+
+<script>
+function greet(name){
+	console.log('Hey there, ' + name);
+}
+greet('Holly');
+greet('Moses');
+</script>
+
+<script>
+function greet(name){
+	console.log('Yo, my man ' + name);
+}
+greet('Jeff');
+greet('Dave');
+</script>
+
+<script>
+function greet(name){
+	console.log('Howdy ' + name);
+}
+greet('Johnny');
+greet('Joshy-pooh');
+</script>
+
+<script>
+function greet(name){
+	console.log('Hey there, ' + name);
+}
+greet('Ashely');
+greet('David');
+</script>
+
+<script>
+function greet(name){
+	console.log('Hey come back here ' + name +', right now!' );
+}
+greet('John');
+greet('Annie');
+</script>
+
+<script>
+function greet(name){
+	console.log('Hi ' + name);
+}
+greet('Josh');
+greet('Paisely');
+</script>
+
+<!-- Practice writing output into a div some more -->
+
+<script>
+	var hello = 'Hello';
+
+document.getElementById('name').innerHTMl = hello;
+</script>
+
+<script>
+function greet(){
+	var message = 'Hey man -- que pasa?';
+	return message;
+}
+document.getElementById('output2').innerHTML = greet();
+</script>
+
+<!-- Output of a color (word) into a Div -->
+
+<script>
+function blue(){
+	var shirtColor = "My shirt color is blue!";
+	return shirtColor;
+}
+document.getElementById('shirt-color').innerHTML = blue();
+</script>
+
+<script>
+function blue2(){
+	var shirtColor2 = "blue."
+	return shirtColor2;
+}
+document.getElementById('shirt-color2').innerHTML = blue2();
+</script>
+
+<!-- Sum output into console / type it once then tyep again 4 times -->
+
+<script>
+function sum(a,b){
+	return a+b;
+}
+console.log("The sum is " + sum(4,6));
+</script>
+
+<script>
+function sum(c,d){
+	return c+d;
+}
+console.log("The sum is " + sum(10,30));
+</script>
+
+<script>
+function sum(a,b){
+	return a+b;
+}
+document.getElementById('sum1').innerHTML = sum(30,10);
+</script>
+
+<script>
+function sum(a,b){
+	return a+b;
+}
+console.log("The sum of of 110 + 120 = " + sum(110, 120));
+</script>
+
+<script>
+function sum(a,b){
+	return a+b;
+}
+console.log("The sume of 440 + 440 is " + sum(440, 440));
+</script>
+
+<script>
+function sum(c,d){
+	return c+d;
+}
+console.log("By adding 330 + 990 you get a total sum of " + sum(330, 990)+".");
+</script>
+
+<script>
+function add(b,d,z){
+return b+d+z;
+}
+console.log("The total sum of the numbers 100, 100, and 300 is " + add(100, 100, 300)+".");
+</script>
+
+<script>
+function sum(x,y,z){
+	return x+y+z;
+}
+console.log("The total sum of 300 plus 300 plus 400 equals "+sum(300,300,400)+".")
+</script>
+
+<script>
+function doMath(a,b,c){
+	return a*b*c;
+}
+console.log("The total product of 2 times 2 times 5 is "+doMath(2,2,5)+".");
+</script>
+
+<script>
+function doMath(){
+	var multi = 10*10*30;
+	return multi;
+}
+document.getElementById('output3').innerHTML = doMath();
+</script>
+
+<!-- les of math operators
+var x = 2;
+x += 4; Same as x = x+4;
+x -= 3; Same as x = x-3;
+x *= 10; Same as x = x*10;
+x /= 5; Same as x = x/5;
+x %= 3; Same as x = x%3;
+-->
+
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+</head>
+<body>
+<style>
+p {
+	padding-top: 10px;
+	padding-bottom: 5px;
+	font-family: sans-serif, arial, verdana;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 17px;
+	line-height: 17px;
+}
+
+.highlighted{
+	background-color: yellow;
+}
+
+.speeding{
+	padding: 3px;
+	background-color: red;
+	color: white;
+	font-weight: 800;
+}
+
+.goodspeed{
+	padding: 3px;
+	background-color: green;
+	color: white;
+	font-weight: 800;
+}
+</style>
+
+<!-- HTML Div section -->
+
+<div id="mydiv">You can't see me.</div>
+
+<span id="mytext">Here's some text</span>
+
+<div><p>Your skill is greater than 90 and your name is "Falco":</p>
+<div id="falco"><p></p></div>
+
+<div id="mydiv2"><p>Styled directly</p></div>
+
+<p><span id="mydiv3">Here's some text.</span></p>
+
+<p><span id="checkspeed-100">Your speed is over 100!</span></p>
+
+<p><span id="checkspeed-99">Your speed is within the speed limit — nice job!</span></p>
+
+<p><span id="checkspeed-101">Your speed is over 100!</span></p>
+
+<p><span id="checkspeed-97">Your speed is within the speed limit — nice job!</span></p>
+
+
+<div id="checkspeed-01"><p><span id="syle"></span></p>
+</div>
+
+<div id="congratulations">
+	<p>Congratulations — you're a winner!</p>
+</div>
+
+<!-- Logical operators
+    && (which means “and”)
+    || (which means “or”)
+    ! (this means “not”)
+ -->
+
+ <!-- Examples #1 - hiding a div -->
+ <script>
+ document.getElementById('mydiv').style.display ='none';
+ </script>
+
+ <!-- Examples #2 - change an element's class name -->
+
+<script>
+document.getElementById('mytext').className = 'highlighted';
+</script>
+
+
+
+<!-- Excercise section -->
+
+<!-- Excercise #1 -->
+<script>
+document.getElementById('mydiv2').style.color = 'green';
+document.getElementById('mydiv2').style.backgroundColor;
+</script>
+
+<!--Exercise #2 hightlightine text -->
+<script>
+document.getElementById('mydiv3').className = 'highlighted';
+</script>
+
+<script>
+document.getElementById('mydiv3').className = 'highlighted';
+</script>
+
+<script>
+document.getElementById('mydiv3').className = 'highlighted';
+</script>
+
+<script>
+document.getElementById('mydiv3').className = 'highlighted';
+</script>
+
+<!--Exercise #3 // Check speed -->
+
+<!--
+1) Create an HTML div with whatever id you want.
+2) Then create a function called checkSpeed that takes in a parameter called speed.
+
+    - If speed is greater than 100, turn the div’s background red and make the innerHTML say “Too fast.”
+    - Otherwise, make the div’s background green and make it say “Good speed.”
+
+Run your checkSpeed function with different speeds to make sure your code works. For example: checkSpeed(40) or maybe checkSpeed(500) -->
+
+<!-- version 1 -->
+<script>
+var speed= 102;
+	if(speed >= 100){
+	document.getElementById('checkspeed-100').className = 'speeding';
+}
+else{
+	document.getElementById('checkspeed-99').className = 'goodspeed';
+}
+</script>
+
+<!-- version 2 -->
+<script>
+var speed = 100;
+function checkSpeed(speed){
+ if(speed > 100){
+		document.getElementById('checkspeed-01').innerHTML = 'Too fast!';
+		document.getElementById('style').className = 'speeding';
+	}
+	else{
+		document.getElementById('checkspeed-01').innerHTML = 'Good speed!';
+		document.getElementById('style').className = 'goodspeed';
+	}
+}
+</script>
+
+<!-- version 3 -->
+<script>
+function checkSpeed(speed){
+	var speed = 102;
+
+	if(speed > 100){
+		document.getElementById('checkspeed-101').style.display = '';
+		document.getElementById('checkspeed-97').style.display = 'none';
+		document.getElementById('checkspeed-101').className = 'speeding';
+	}
+	else{
+		document.getElementById('checkspeed-97').styley.display ='';
+		document.getElementById('checkspeed-101').style.display = 'none';
+		document.getElementById('checkspeed-97').className = 'goodspeed';
+	}
+}
+</script>
+
+
+<!-- version 4 -->
+<script>
+function checkSpeed(speed){
+	// Speed variable to check
+	var speed = 102;
+	// Out put message based on speed
+	var tooFast = 'Too fast!';
+	var goodSpeed = 'Good speed — nice work!'
+	if(speed > 100){
+ 		document.getElementById('checkspeed-01').innerHTML = tooFast;
+ 		document.getElementById('style').className = 'speeding';
+ 	}
+ 	else{
+ 		document.getElementById('checkspeed-01').innerHTML = 'goodSpeed';
+ 		document.getElementById('style').className = 'goodspeed';
+ 	}
+}
+</script>
+
+
+<!-- Exercise 4 Congratulations -->
+
+<script>
+/*
+Create an HTML div with the word “Congratulations” inside. Then create a variable called winner.
+
+    If winner has a value of true, show the div.
+    Otherwise, hide it.
+
+Hint: If you can’t remember the short way of checking if a boolean is true or false, refer to the previous unit.
+*/
+var winner = true;
+if(winner){
+	//showing
+document.getElementById('congratulations').style.display = '';
+}
+else{
+	// hiding
+	document.getElementById('congratulations').style.display = 'none';
+}
+</script>
+
+</body>
+</html>

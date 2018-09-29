@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+</head>
+<body>
+<style>
+p {
+	padding-top: 10px;
+	padding-bottom: 5px;
+	font-family: sans-serif, arial, verdana;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 17px;
+	line-height: 17px;
+}
+
+.highlighted{
+	background-color: yellow;
+}
+
+.btn{
+	background-color: green;
+	text-align: center;
+	color: white;
+	padding: 3px;
+	border-radius: 5px;
+}
+
+.sum-btn{
+	background-color: #3089c9;
+	text-align: center;
+	color: white;
+	padding: 3px;
+	border-radius: 5px;
+	font-size: 17px;
+}
+
+.hide-btn{
+	background-color: #3089c9;
+	text-align: center;
+	color: white;
+	padding: 3px;
+	border-radius: 5px;
+	font-size: 17px;
+}
+
+.show-btn{
+	background-color: #adf442;
+	text-align: center;
+	color: white;
+	padding: 3px;
+	border-radius: 5px;
+	font-size: 17px;
+}
+
+
+.blue{
+	background-color: #3089c9;
+	color: white;
+	font-weight: bold;
+	padding: 2px;
+}
+	.hideit{
+		display: none;
+	}
+
+	.showit{
+		display: block;
+	}
+</style>
+
+<!-- HTML Div section -->
+<div><p id="checkspeed-01"></p>
+</div>
+
+<div id="mydiv">Click here</div>
+
+<button id="mybutton">Show sum</button>
+<div id="output"></div>
+
+
+<!-- Excercises section -->
+
+
+	<!-- Exercise 8 -->
+	<div style="padding-top:30px;">
+	<hr/>
+	<p>Hide me #2 — Check it out - show or hide the text below using the button you see:</P>
+	<div><span id="hideme2" class="showit"><p>You can both hide or make this sentence reappear using the button below.</p></span></div>
+	<div><span id="hideme3" class="hideit"><p>You can both hide or make this sentence reappear using the button below.</p></span></div>
+	<button id="hideme2" class="show-btn">Hide/Reappear</button>
+	<button style="display: none;" id="hideme3" class="show-btn">Hide/Reappear</button>
+	</div>
+
+<!--
+Steps:
+1) click
+2) determine if the div is visible
+2a) If visible, hide it.
+3) If else, make it visible
+-->
+
+<!--
+<script>
+document.getElementById('hideme2').onclick = function(){
+	if(className == 'showit'){
+		document.getElementById('hideme2').style.display = 'none';}
+	if(className =='hideit'){
+		document.getElementById('hideme3').style.display ='block';}
+};
+document.getElementById('hideme3'.onclick = function(){
+	if(className == 'showit'){
+		document.getElementById('hideme3').style.display ='none';}
+		if(className == 'hideit'){
+			document.getElementById('hideme2').style.display = 'block'}
+			else{
+						document.getElementById('hideme2').style.display = 'block';};
+</script>
+-->
+
+<!--
+<script>
+document.getElementById('hide-btn').onclick = function(){
+	if(className = 'showit'){
+		document.getElementById('hideme3').className = 'hideit';}
+	};
+</script> -->
+
+<script>document.getElementById('hideme2').onclick = function(){
+	if (className == 'hideme2'  && Element == 'hideme3'){
+		document.getElementById('hideme2').className = 'hideit';
+	}
+};
+</script>
+
+<script>document.getElementById('hideme2').onclick = function(){
+	document.getElementById('hideme2').className = 'hideit';
+};
+</script>
+
+<!--
+<script>
+//function to hide the div
+function hideMe(){
+	document.getElementById('hideme2').className ='hideit';
+}
+document.getElementById('hrbutton').onclick = function(){
+//detect if div is hidden by its class name
+if(className == 'hideit'){
+	// make div visible if it's not hidden
+	document.getElementById('hideme2').syle.display ='';
+}
+else{
+	// Else - if div isn't hidden, use the hideMe function
+	hideMe;}
+};
+</script> -->
+
+<hr/>
+</div>
+
+
+</html>

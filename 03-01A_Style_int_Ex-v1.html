@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+</head>
+<body>
+<style>
+p {
+	padding-top: 10px;
+	padding-bottom: 5px;
+	font-family: sans-serif, arial, verdana;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 17px;
+	line-height: 17px;
+}
+
+.highlighted{
+	background-color: yellow;
+}
+
+.speeding{
+	padding: 3px;
+	background-color: red;
+	color: white;
+	font-weight: 800;
+}
+
+.goodspeed{
+	padding: 3px;
+	background-color: green;
+	color: white;
+	font-weight: 800;
+}
+</style>
+
+<!-- HTML Div section -->
+
+<p><span id="checkspeed-100">Your speed is over 100!</span></p>
+
+<p><span id="checkspeed-99">Your speed is within the speed limit — nice job!</span></p>
+
+<p><span id="checkspeed-101">Your speed is over 100!</span></p>
+
+<p><span id="checkspeed-97">Your speed is within the speed limit — nice job!</span></p>
+
+
+<div id="checkspeed-01"><p></p>
+</div>
+
+<div id="checkspeed-02"><p></p>
+</div>
+
+
+<!--Exercise #3 // Check speed -->
+
+<!--
+1) Create an HTML div with whatever id you want.
+2) Then create a function called checkSpeed that takes in a parameter called speed.
+
+    - If speed is greater than 100, turn the div’s background red and make the innerHTML say “Too fast.”
+    - Otherwise, make the div’s background green and make it say “Good speed.”
+
+Run your checkSpeed function with different speeds to make sure your code works. For example: checkSpeed(40) or maybe checkSpeed(500) -->
+
+<!-- version 1 -->
+<script>
+var speed= 102;
+	if(speed >= 100){
+	document.getElementById('checkspeed-100').className = 'speeding';
+}
+else{
+	document.getElementById('checkspeed-99').className = 'goodspeed';
+}
+</script>
+
+<!-- version 2 -->
+<script>
+var speed = 100;
+function checkSpeed(speed){
+ if(speed > 100){
+		document.getElementById('checkspeed-01').innerHTML = 'Too fast!';
+		document.getElementById('style').className = 'speeding';
+	}
+	else{
+		document.getElementById('checkspeed-01').innerHTML = 'Good speed!';
+		document.getElementById('style').className = 'goodspeed';
+	}
+}
+</script>
+
+<!-- version 3 -->
+<script>
+function checkSpeed(speed){
+	var speed = 102;
+
+	if(speed > 100){
+		document.getElementById('checkspeed-101').style.display = '';
+		document.getElementById('checkspeed-97').style.display = 'none';
+		document.getElementById('checkspeed-101').className = 'speeding';
+	}
+	else{
+		document.getElementById('checkspeed-97').styley.display ='';
+		document.getElementById('checkspeed-101').style.display = 'none';
+		document.getElementById('checkspeed-97').className = 'goodspeed';
+	}
+}
+</script>
+
+
+<!-- version 4 -->
+<script>
+function checkSpeed(speed){
+	// Speed variable to check
+	var speed = 102;
+	// Out put message based on speed
+	var tooFast = 'Too fast!';
+	var goodSpeed = 'Good speed — nice work!'
+	if(speed > 100){
+ 		document.getElementById('checkspeed-01').innerHTML = tooFast;
+ 		document.getElementById('style').className = 'speeding';
+ 	}
+ 	else{
+ 		document.getElementById('checkspeed-01').innerHTML = 'goodSpeed';
+ 		document.getElementById('style').className = 'goodspeed';
+ 	}
+}
+</script>
+
+<!-- version 5 -->
+<script>
+
+
+// time to declare the function & display statement
+function checkSpeed(speed){
+	// Speed variable to check
+	var speed = 99;
+	// Out put message based on speed
+	var tooFast = 'Too fast!';
+	var goodSpeed = 'Good speed — nice work!'
+	if(speed>=100){
+ 		document.getElementById('checkspeed-01').innerHTML = tooFast;
+ 	}
+ 	else{
+ 		document.getElementById('checkspeed-01').innerHTML = goodSpeed;
+ 	}
+}
+// run the function again -- apply style this time
+checkSpeed();
+if(speed>=100){
+	document.getElementById('checkspeed-01').className = 'speeding';
+}
+else{
+	document.getElementById('checkspeed-01').className = 'goodspeed';
+}
+}
+</script>
+
+
+</body>
+</html>
