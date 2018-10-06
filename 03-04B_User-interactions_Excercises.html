@@ -82,15 +82,23 @@ document.getElementById('mycolor').onfocus = function(){
 	<hr>
 	</div>
 
+<!-- Do the following
+Determine is the field blank?
+1) If field has text, keep style
+2) Else (field is blank) turn border red
+-->
+
 <script>
-	var inputCheck = document.getElementById('a').value;
 document.getElementById('a').onkeyup = function(){
-	
-	if(inputCheck === ""){
+	var inputCheck = document.getElementById('a').value;
+	var inputFalse = inputCheck == "";
+	if(inputFalse){
 		document.getElementById('a').className = 'notext';
-		document.getElementById('output3').innerHTML = "Please enter some text!";}
+		document.getElementById('output3').innerHTML = 'Please enter some text!';
+	}
 	else{
+		document.getElementById('a').className = 'slightborder';
 		document.getElementById('output3').innerHTML = 'You typed: '+inputCheck;
-		document.getElementById('inputcheck').className = 'slightborder';}
+	}
 };
 </script>
