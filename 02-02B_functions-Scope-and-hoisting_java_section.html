@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+</head>
+<body>
+
+<!-- HTML Div section -->
+
+<div style="padding-bottom: 30px;"><p>Hey there:</p>
+	<p><div id="local-scope"></div></p>
+</div>
+
+<div style="padding-bottom: 30px;"><p>Hey there:</p>
+	<p><div id="global-scope-1"></div></p>
+</div>
+
+<div style="padding-bottom: 30px;"><p>Hey, I said hello to you, <div id="global-scope-2"></div></p>
+</div>
+
+<div style="padding-bottom: 30px;"><p>Hey, I said hello to you, <div id="global-scope-3"></div></p>
+</div>
+
+<div style="padding-bottom: 30px;"><p>Yo, <div id="global-scope-4"></div></p>
+</div>
+
+<!-- writing script + examples section -->
+
+<!-- Getting started -->
+
+
+<!-- Global scope vs Local scope
+Global scope: Access anywhere
+Local scope: Access only inside function
+-->
+
+<script>
+var globalExample = 'This is global.';
+console.log(globalExample); // this WILL work
+
+function sayStuff(){
+	console.log(globalExample); // this WILL work
+
+	var localExample = 'This is local.';
+	console.log(localExample); //this WILL work
+}
+</script>
+
+<!-- variable test: important to call a variable var -->
+
+<script>
+function test(){
+   x= 5; //becomes global becase you forgot "var"
+	 return x;
+}
+console.log(test());
+</script>
+
+<!-- Hoisting example -->
+
+<script>
+greet();
+function greet(){
+	console.log('hello');
+}
+</script>
+
+<!-- Variable Declarations section -->
+
+<script>
+console.log(whatever); // Produces 'Undefined' error
+</script>
+
+<script>
+console.log(whatever);
+var whatever = 'some text'; // No error as what happens on line #51, but still get an 'undefined' statement
+</script>
+
+<script>
+function greet(){
+	console.log('Hello #1 test!');
+}
+greet();
+</script>
+
+<script>
+greet();
+function greet(){
+	console.log('Hello #2 test!')
+}
+</script>
+
+<script>
+var whatever = 'some text test #1';
+console.log(whatever);
+</script>
+
+<script>
+console.log(whatever);
+var whatever = 'some text test #2';
+</script>
+
+<script>
+console.log(whatever);
+</script>
+
+<script>
+console.log(whatever);
+var whatever = 'some text test #3';
+</script>
+
+<script>
+var whatever;
+console.log(whatever);
+
+whaetver = 'some text test #4';
+</script>
+
+<script>
+var whatever = 'some text test #5';
+console.log(whatever);
+</script>
+
+<script>
+function name(){
+	var boyName = "Danny";
+	return boyName;
+}
+document.getElementById('local-scope').innerHTML = name();
+</script>
+
+<script>
+var boyName = 'Johnny James';
+function bName(){
+	return boyName;
+}
+	document.getElementById('globlal-scope').innerHTML = bName();
+</script>
+
+<script>
+function test(){
+	x = 'Johnny James';
+	return x;
+}
+test();
+document.getElementById('global-scope-1').innerHTML = test();
+document.getElementById('global-scope-2').innerHTML = test();
+</script>
+
+<script>
+var y = "Thadeus Rex";
+function tName(){
+	return y;
+}
+tName();
+document.getElementById('global-scope-3').innerHTML = tName();
+document.getElementById('global-scope-4').innerHTML = tName();
+</script>
+
+
+</body>
+</html>

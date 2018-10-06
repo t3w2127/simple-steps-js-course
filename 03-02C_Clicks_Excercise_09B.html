@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+</head>
+<body>
+<style>
+p {
+	padding-top: 10px;
+	padding-bottom: 5px;
+	font-family: sans-serif, arial, verdana;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 17px;
+	line-height: 17px;
+}
+
+.sum-btn{
+	background-color: #3089c9;
+	text-align: center;
+	color: white;
+	padding: 3px;
+	border-radius: 5px;
+	font-size: 17px;
+}
+</style>
+
+<!-- Exercise 9 -->
+<div style="padding-top:30px;">
+<hr/>
+<p>Want free points? Click the button below to get more!</P>
+<div>
+<p><span id="output">0</span></p>
+</div>
+<button id="numgame" class="sum-btn">Click for points</button>
+<hr>
+</div>
+
+<!-- Steps:
+1) onclick
+2a) Determine if score is zero and less than 5
+2b) If score is less than 5 add 1 with each click
+2c) Else, if score is equal to 5
+  - say game over
+  - reset score to zero
+-->
+
+<!-- Version A -->
+<script>
+var a = 0;
+document.getElementById('numgame').onclick = function(){
+    if((a==0) || (a<6)){a+=1; document.getElementById('output').innerHTML = 'Your score is '+a+'.';}
+    else{
+        a = 0;
+        document.getElementById('output').innerHTML = 'Game over. You score is back to 0 -- start over.';}};
+</script>
+
+<!--document.getElementById('numgame').onclick = function(){
+		document.getElementById('output').innnerHTML = 'Your score is 0 keep going!';
+		//console.log('Variable a = ' +a)
+	} */
+  </script> -->
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+</head>
+<body>
+
+<div style="padding-bottom: 30px;"><p> Final bill:</p>
+	<p><div id="output"></div></p>
+	<p><div id="tip-total"></div></p>
+<p>Bill: $<span id="bill"></span></p>
+<p>Tip: $<span id="tip"></span></p>
+<p>Total: $<span id="total"></span></p>
+</div>
+
+
+<script>
+function tip(bill, percent){
+	var result = bill * (percent/100);
+	return result;
+}
+
+function total(tip, re){
+	 var result2 = myBill + tipTotal;
+	 return result2;
+}
+
+var myBill = 25;
+var tipPercent = 20;
+var tipTotal = myBill * 1.2;
+
+var message = "The bill is $" + myBill + " and the tip is $" + tip(myBill, tipPercent);
+
+var message2 = "The total bill is $" + tipTotal;
+
+document.getElementById('output').innerHTML = message;
+document.getElementById('tip-total').innerHTML = message2;
+document.getElementById('bill').innerHTML = myBill;
+document.getElementById('tip').innerHTML = tip(myBill, tipPercent);
+document.getElementById('total').innerHTML = tipTotal;
+
+</script>
+
+<!--
+<script>
+function total(tip, result){
+	 var billResult = myBill + tipTotal;
+	 return billResult;
+}
+		var myBill = 25;
+		var tipPercent = 20;
+		var tipTotal = myBill * 1.2
+
+		document.getElementByID('bill').innerHTML = myBill;
+		document.getElementById('tip').innerHTML = tip;
+		document.getElementById('total').innerHTML = tipTotal;
+</script>
+-->
+<!-- Examples of math operators
+var x = 2;
+x += 4; Same as x = x+4;
+x -= 3; Same as x = x-3;
+x *= 10; Same as x = x*10;
+x /= 5; Same as x = x/5;
+x %= 3; Same as x = x%3;
+-->
+
+</body>
+</html>

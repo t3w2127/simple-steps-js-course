@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+</head>
+<body>
+<style>
+p {
+	padding-top: 10px;
+	padding-bottom: 5px;
+	font-family: sans-serif, arial, verdana;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 17px;
+	line-height: 17px;
+}
+
+.sum-btn{
+	background-color: #3089c9;
+	text-align: center;
+	color: white;
+	padding: 3px;
+	border-radius: 5px;
+	font-size: 17px;
+}
+</style>
+
+<!-- Input form #1-->
+<div style="padding-top:30px;">
+<hr/>
+<input id="mytext" type="text">
+<button id="mybutton" class="sum-btn">Click me</button>
+<div id="output"></div>
+<hr>
+</div>
+
+<!-- Input form #2-->
+<div style="padding-top:30px;">
+		<hr/>
+		<input id="miles" type="text">miles<br><button id="convert">convert to KM</button>
+		<div id="output2"></div>
+		<hr>
+		</div>
+		
+
+<!--Script for form #1-->
+<script>
+	document.getElementById('mybutton').onclick = function(){
+		var text = document.getElementById('mytext').value;
+		document.getElementById('output').innerHTML = text;
+	};
+</script>
+
+<!--script for form #2-->
+<script>
+	document.getElementById('convert').onclick = function(){
+		var mi = document.getElementById('miles').value;
+		var km = mi * 1.609344;
+		document.getElementById('output2').innerHTML = km + ' km';
+	};
+</script>
+</html>

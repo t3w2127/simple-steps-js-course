@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+</head>
+<body>
+<style>
+p {
+	padding-top: 10px;
+	padding-bottom: 5px;
+	font-family: sans-serif, arial, verdana;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 17px;
+	line-height: 17px;
+}
+
+.sum-btn{
+	background-color: #3089c9;
+	text-align: center;
+	color: white;
+	padding: 3px;
+	border-radius: 5px;
+	font-size: 17px;
+}
+</style>
+
+<!-- Input form Excercise #2-->
+<div style="padding-top:30px;">
+<hr/>
+<h3>Type your name below</h3>
+<input id="namebox" type="text">
+<button id="name-btn" class="sum-btn">Click me</button>
+<div id="output1"></div>
+<hr>
+</div>
+<script>
+	document.getElementById('name-btn').onclick = function(){
+	var name = document.getElementById('namebox').value;
+	var nameDisplay = document.getElementById('output1').innerHTML = 'Hello '+name+' !';
+	};
+</script>
+
+
+</html>

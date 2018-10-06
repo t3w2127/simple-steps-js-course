@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+</head>
+<body>
+
+<div style="padding-bottom: 30px;"><p> Final bill:</p>
+<p>Bill: $<span id="bill"></span></p>
+<p>Tip: $<span id="tip"></span></p>
+<p>Total: $<span id="total"></span></p>
+</div>
+
+<script>
+// First you define the function
+function sayStuff() {
+
+	// all of the code in here will run whenever you call your function
+	console.log('hi');
+	console.log('this is neat');
+}
+
+// now you can run the function whenever you want
+sayStuff();
+
+// run the function again just for function
+sayStuff();
+	</script>
+
+<script>
+function doMath() {
+return 1.2 * 10;
+}
+
+console.log( doMath() );
+console.log('The answer is: ' + doMath() );
+
+</script>
+
+<script>
+function greet(name){
+	console.log( 'Hi ' + name);
+}
+greet('Mr. Meow');
+greet('Godzilla');
+</script>
+
+<script>
+function show(title){
+	console.log( 'My favorite show is ' + title + '.' );
+}
+show('Lost');
+show('Grand Designs');
+show('Happy Valley');
+</script>
+
+<script>
+function movie(title){
+	console.log( 'My favorite movie is ' + title + '.')
+}
+movie('39 Steps');
+movie('LA Story');
+movie('The Constant Gardner');
+</script>
+
+<script>
+function sum(a,b){
+	return a+b;
+}
+console.log( sum(2,3));
+console.log( sum(7,9));
+</script>
+
+<script>
+function subtract(a,b){
+return a-b;
+}
+console.log( subtract(90,9));
+console.log( subtract(70,70));
+</script>
+
+<!-- Practical example-->
+
+<div id="output"></div>
+
+<div id="tip-total"></div>
+
+<script>
+function tip(bill, percent){
+	var result = bill * (percent/100);
+	return result;
+}
+
+var myBill = 25;
+var tipPercent = 20;
+
+var message = "The bill is $" + myBill
+		+ " and the tip is $" +tip(myBill, tipPercent);
+
+		document.getElementById('output').innerHTML = message;
+		</script>
+
+		<div id="output2"></div>
+
+		<div id="tip-total"></div>
+
+<script>
+function tip(bill, percent){
+	var result = bill * (percent/100);
+	result;
+}
+
+// Next add the tip to the total
+function total(tip, result){
+	 myBill + result;
+}
+		var myBill = 25;
+		var tipPercent = 20;
+
+		var message1 = "The bill is $" + myBill
+		+ " and the tip is $" + tip(myBill, tipPercent);
+
+		var message2 = "The total bill is $" + total(myBill, result);
+
+		document.getElementByID('output2').innerHTML = message1;
+		document.getElementById('tip-total').innerHTML = message2;
+</script>
+
+<!-- Examples of math operators
+var x = 2;
+x += 4; Same as x = x+4;
+x -= 3; Same as x = x-3;
+x *= 10; Same as x = x*10;
+x /= 5; Same as x = x/5;
+x %= 3; Same as x = x%3;
+-->
+
+</body>
+</html>

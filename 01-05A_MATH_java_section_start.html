@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+</head>
+<body>
+<div style="padding-bottom: 30px;"><p> How much does 5 + 3 equal? <span id="number5-3"></span></p>
+</div>
+
+<div style="padding-bottom: 30px;"><p> You have 11 pizza slices and 3 friends. How many slices will each friend get?</p>
+<p>Silces for each friend: <span id="friends"></span></p>
+<p>Leftover slices: <span id="slices"></span></p>
+</div>
+
+<div style="padding-bottom: 30px;"><p> Final bill:</p>
+<p>Bill: $<span id="bill"></span></p>
+<p>Tip: $<span id="tip"></span></p>
+<p>Total: $<span id="total"></span></p>
+</div>
+
+<div id="div4"></div>
+
+<div id="div5"></div>
+
+<script>
+var x = 5 % 3;
+console.log(x);
+</script>
+
+<script>
+var leftoversandwiches = 10 % 3; // get remainder of 10/3
+console.log(leftoversandwiches);
+</script>
+
+<script>
+var time = (2+27) % 24;
+console.log(time);
+</script>
+
+<script>
+var x = 6;
+x++;
+console.log(x);
+</script>
+
+<script>
+var a = 5;
+var b = 3;
+var c = a + b;
+document.getElementById('number5-3').innerHTML = (c);
+</script>
+
+<script>
+var a = 11;
+var b = 3
+var c = a / b;
+var d = a % b;
+document.getElementById('friends').innerHTML = c;
+document.getElementById('slices').innerHTML = d;
+</script>
+
+<script>
+var bill = 10;
+var tip = 0.2 * bill; // 20% or 120% to use to multiply
+var total = bill + tip;
+
+document.getElementById('bill').innerHTML = bill;
+document.getElementById('tip').innerHTML = tip;
+document.getElementById('total').innerHTML = total;
+</script>
+
+<!-- Examples of math operators
+var x = 2;
+x += 4; Same as x = x+4;
+x -= 3; Same as x = x-3;
+x *= 10; Same as x = x*10;
+x /= 5; Same as x = x/5;
+x %= 3; Same as x = x%3;
+-->
+
+</body>
+</html>

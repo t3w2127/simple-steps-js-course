@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+</head>
+<body>
+<style>
+body{
+	font-family: sans-serif, arial, verdana;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 17px;
+	line-height: 17px;
+}
+</style>
+
+<!-- HTML Div section -->
+
+<div style="padding-bottom: 30px;"><p>Your skill is greater than 90 and your name is "Falco":</p>
+<div id="falco"><p></p></div>
+</div>
+
+<div style="padding-bottom: 30px;"><p>Score: 5 / Time left = 0</p>
+	<p id="score"></p>
+</div>
+
+<div style="padding-bottom: 30px;"><p>Did you practice?</p>
+	<p id="practice"></p>
+</div>
+
+<div style="padding-bottom: 30px;"><p>Do you have what it takes to get into the ticket?</p>
+	<p id="vip-event"></p>
+</div>
+
+<!-- Logical operators
+    && (which means “and”)
+    || (which means “or”)
+    ! (this means “not”)
+ -->
+
+ <!-- Examples #1 -->
+
+ <script>
+ //example of "and"
+ var age=12;
+ var height=58;
+ if (age=10 && height>=42){
+	 console.log('You can go on the rollercoaster.')
+ }
+</script>
+
+<script>
+//example of "or"
+var name = 'Bowser';
+if(name =='The Emperor' || name == 'Bowser)'){
+	console.log('You get the VIP table.')
+}
+</script>
+
+<script>
+
+//example of "not"
+if(name!='Gerbil'){
+	console.log('Your name is not Gerbil.')
+}
+</script>
+
+<!-- Parentheses -->
+<script>
+var money = 2000000000001;
+var fame = 9001;
+var name = 'Bowser';
+if((money>3000000000000 && fame>8999) || name=='JEFF'){
+	console.log('You can ride the VIP rollercoaster.');
+}
+else{
+	console.log('You cannot ride on the VIP rollercoaster');
+}
+</script>
+
+<!-- Booleans -->
+
+<!-- Boolean example -->
+<script>
+var correctFingerprint = true;
+
+if(correctFingerprint == true){
+	console.log('correct');
+}
+</script>
+
+<script>
+var correctFingerprint = true;
+// he previous statement works…
+// but this is more concise, so do it this way
+if( correctFingerprint ){
+	console.log('correct');
+}
+</script>
+
+<!-- Shortcut for checking if something is false -->
+
+<script>
+var youAreBowser = false;
+if( !youAreBowser ){
+	console.log('You are not Bowser.')
+}
+</script>
+
+<!-- Excercise section -->
+
+<!-- Excercise #1 -->
+<script>
+var skill = 89;
+var name = 'Joshy';
+//If skill is greater than 90 and name equals “Falco”, show “Falco wins!” in an HTML div.
+if (skill>90 && name == 'Falco'){
+	document.getElementById('falco').innerHTML = 'Falco wins!';
+}
+else{
+	document.getElementById('falco').innerHTML = 'Who are you?';
+}
+</script>
+
+<!-- Excercise #2 -->
+<script>
+var score = 4;
+var timeLeft = 2;
+//If score equals 5 or timeLeft equals zero, show “Game Over” in an HTML paragraph.
+if ((score == 5) || (timeLeft == 0)){
+	document.getElementById('score').innerHTML = 'Game Over';
+}
+</script>
+<!-- Excercise #3 -->
+<script>
+var didPractice = false;
+//If didPractice is false, show the phrase “You did not practice” in an HTML div.
+if (didPractice){
+	document.getElementById('practice').innerHTML = 'Awesome you practiced!'
+}
+else{
+	document.getElementById('practice').innerHTML = 'Bummer! you did not practice. No ice cream for you.'
+}
+</script>
+
+<!-- Excercise #4 -->
+<script>
+/* You need to be a celebrity and have a valid ticket, or you need to give the guards a bribe of over 9000 units of money.
+
+Your mission:
+
+Create the following variables: isCelebrity, validTicket, and bribe.
+
+If isCelebrity is true and validTicket is true… or if bribe is greater than 9000, show “Welcome to the concert” in an HTML div.
+
+Otherwise, show “No concert for you” in the div. */
+
+var isCelebrity = false;
+var validTicket = false;
+var bribe = 8999;
+
+if((isCelebrity && validTicket) || (bribe>=9000)){
+	document.getElementById('vip-event').innerHTML = 'Welcome to the concert!'
+}
+else{
+	document.getElementById('vip-event').innerHTML = 'No ticket for you, sucka!'
+}
+</script>
+
+</body>
+</html>

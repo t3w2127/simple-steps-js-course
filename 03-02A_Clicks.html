@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+</head>
+<body>
+<style>
+p {
+	padding-top: 10px;
+	padding-bottom: 5px;
+	font-family: sans-serif, arial, verdana;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 17px;
+	line-height: 17px;
+}
+
+.highlighted{
+	background-color: yellow;
+}
+
+.btn{
+	background-color: green;
+	text-align: center;
+	color: white;
+	padding: 3px;
+	border-radius: 5px;
+}
+
+.sum-btn{
+	background-color: #3089c9;
+	text-align: center;
+	color: white;
+	padding: 3px;
+	border-radius: 5px;
+	font-size: 17px;
+}
+
+.blue{
+	background-color: #3089c9;
+	color: white;
+	font-weight: bold;
+	padding: 2px;
+}
+	.hideit{
+		display: none;
+	}
+
+	.showit{
+		display: block;
+	}
+</style>
+
+<!-- HTML Div section -->
+<div><p id="checkspeed-01"></p>
+</div>
+
+<div id="mydiv">Click here</div>
+
+<button id="mybutton">Show sum</button>
+<div id="output"></div>
+
+
+<!-- JavaScript section -->
+<!-- Onclick event - example 1 -->
+<!-- <script>
+function changeColor(){
+	document.getElementById('mydiv').style.color ='red';
+}
+document.getElementById('mydiv').onclick = changeColor;
+</script> -->
+
+<!-- Onclick event - example 2 more practical example -->
+<script>
+document.getElementById('mydiv').onclick = function(){
+	//put any code you want to run when the div is clicked
+	document.getElementById('mydiv').style.color = 'green';
+};
+</script>
+
+<!-- Example to type out -->
+<script>
+document.getElementById('mydiv').onclick = function(){
+	//put any code you want in here
+};
+</script>
+
+<!-- Onclick event - example 3 + click and get sum -->
+<script>
+function showSum(a,b){
+	var sum=a+b;
+	document.getElementById('output').innerHTML = 'Sum: '+sum;
+	}
+	document.getElementById('mybutton').onclick = function(){showSum(3,5);};
+	</script>
+
+<!-- Excercises section -->
+
+<!-- Excercise 1 -->
+
+<div id="mydiv2">Click here</div>
+
+<script>
+function changeText(){
+	document.getElementById('mydiv2').innerHTML = 'new text';
+}
+document.getElementById('mydiv2').onclick = changeText;
+</script>
+
+<!-- Exercise 2 | type a script 5 times -->
+<!--
+document.getElementById('mydiv').onclick = changeText;
+document.getElementById('mydiv').onclick = changeText;
+document.getElementById('mydiv').onclick = changeText;
+document.getElementById('mydiv').onclick = changeText;
+document.getElementById('mydiv').onclick = changeText;
+-->
+
+<!-- Excercise 3 | Type the following script once -->
+<script>
+document.getElementById('mydiv').onclick = function(){
+	// do whatever you want in here
+};
+</script>
+
+<!-- Exercise 4 |
+1)Type the following until you don't need an example anymore...
+2) Then type it 10 more times without looking at any reference -->
+<!--
+document.getElementById('mydiv').onclick = function(){};
+document.getElemenyById('mydiv').onclick = function(){};
+document.getElementById('mydiv').onclick = function(){};
+document.getElementById('mydiv').onclick = function(){};
+document.getElementById('mydiv').onclick = function(){};
+document.getElementById('mydiv').onclick = function(){};
+document.getElementById('mydiv').onclick = function(){};
+document.getElementById('mydiv').onclick = function(){};
+document.getElementById('mydiv').onclick = function(){};
+document.getElementById('mydiv').onclick = function(){};
+document.getElementById('mydiv').onclick = function(){};
+document.getElementById('mydiv').onclick = function(){};
+document.getElementById('mydiv').onclick = function(){};
+-->
+<!--Exercise 5 | Creat a button that, when clicked, turns a div's background blue -->
+<div style="padding-top:30px;">
+<hr/>
+<button style="padding-top: 15px;" id="blue-button" class="btn">Click me —turn the text blue</button>
+<div style="padding-top: 5px;" id="meblue">Hey I turn blue when the button gets clicked above</div>
+
+<script>
+document.getElementById('blue-button').onclick = function(){
+	document.getElementById('meblue').className = 'blue';
+};
+</script>
+<hr/>
+</div
+
+
+<!-- Exercise 6 -->
+<div style="padding-top:30px;">
+<hr/>
+<p>What is the sum of 120 and 350?</p>
+<button id="sbutton" class="sum-btn">Click me to find out</button>
+<p><span id="sum"></span></p>
+<script>
+function showAdd(a,b){
+	var x=a+b;
+	document.getElementById('sum').innerHTML = 'The sum is: '+ x;
+}
+document.getElementById('sbutton').onclick = function(){showAdd(120,350);};
+</script>
+<hr/>
+</div>
+
+<!-- Exercise 7 -->
+<div style="padding-top:30px;">
+<hr/>
+<p>Check it out - show or hide the text below using the buttons you see:</P>
+<div>
+<span id="hideme"><p>Hide this sentence with the "Hide" button, and then make it reappear by clicking the "Reappear" button.</p></span
+</div>
+<button id="hidebutton" class="sum-btn">Hide</button>
+<button id="showbutton" class="sum-btn">Reappear</button>
+</div>
+<script>
+document.getElementById('hidebutton').onclick = function(){
+	document.getElementById('hideme').style.display = 'none';
+};
+</script>
+<script>
+document.getElementById('showbutton').onclick = function(){
+	document.getElementById('hideme').style.display = '';
+};
+</script>
+
+<hr/>
+</div>
+
+<!-- Exercise 8 -->
+<div style="padding-top:30px;">
+<hr/>
+<p>Hide me #2 — Check it out - show or hide the text below using the button you see:</P>
+<div id="hideme2"><p>You can both hide or make this sentence reappear using the button below.</p>
+</div>
+<button id="hrbutton" class="sum-btn">Hide/Reappear</button>
+</div>
+
+<script>
+//function to hide the div
+function hideMe(){
+	document.getElementById('hideme2').className ='hideit';
+}
+document.getElementById('hrbutton').onclick = function(){
+//detect if div is hidden by its class name
+if(className == 'hideit'){
+	// make div visible if it's not hidden
+	document.getElementById('hideme2').syle.display ='';
+}
+else{
+	// Else -- if div isn't hidden, use the hideMe function
+	hideMe;}
+};
+</script>
+
+<!-- Exercise 9 -->
+<div style="padding-top:30px;">
+<hr/>
+<p>Want free points? Click the button below to get more!</P>
+<div>
+<span id="addingones"><p>0</p></span
+</div>
+<button id="numgame" class="sum-btn">Click me for points</button>
+</div>
+
+<script>
+function addPoints(){
+	var points = 0++;
+}
+	document.getElementById('hideme2').onclick = function(){
+		document.getElementById('hideme').className = 'hideit';
+}
+document.getElementById('hrbutton').onclick = function(){
+//first detect if div is hidden by its class name
+if(className == 'hideit'){
+	document.getElementById('hideme2').syle.display ='';
+}
+else{
+	hideMe;}
+};
+</script>
+
+<hr/>
+</div>
+
+
+</html>

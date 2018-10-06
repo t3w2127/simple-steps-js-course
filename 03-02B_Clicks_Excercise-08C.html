@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+</head>
+<body>
+<style>
+p {
+	padding-top: 10px;
+	padding-bottom: 5px;
+	font-family: sans-serif, arial, verdana;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 17px;
+	line-height: 17px;
+}
+
+.highlighted{
+	background-color: yellow;
+}
+
+.btn{
+	background-color: green;
+	text-align: center;
+	color: white;
+	padding: 3px;
+	border-radius: 5px;
+}
+
+.sum-btn{
+	background-color: #3089c9;
+	text-align: center;
+	color: white;
+	padding: 3px;
+	border-radius: 5px;
+	font-size: 17px;
+}
+
+.hide-btn{
+	background-color: #3089c9;
+	text-align: center;
+	color: white;
+	padding: 3px;
+	border-radius: 5px;
+	font-size: 17px;
+	display: none;
+}
+
+.show-btn{
+	background-color: #adf442;
+	text-align: center;
+	color: white;
+	padding: 3px;
+	border-radius: 5px;
+	font-size: 17px;
+}
+
+
+.blue{
+	background-color: #3089c9;
+	color: white;
+	font-weight: bold;
+	padding: 2px;
+}
+	.hideit{
+		display: none;
+	}
+
+	.showit{
+		display: block;
+	}
+</style>
+
+<!-- HTML Div section -->
+
+	<!-- Exercise 8B -->
+	<!-- Div version A (2 buttons)
+	<hr>
+	<div id="hide" class="showit" style="display: block;">
+	<p>Hide me #2 — Check it out - show or hide the text below using the button you see:</P>
+	<p>You can both hide or make this sentence reappear using the button below.</p>
+	</div>
+	<hr>
+	<button id="hide-btn" class="show-btn">Hide/Reappear</button>
+	<button id="hide-btn" class="hide-btn">Hide/Reappear</button>
+-->
+
+<!-- Div version B (1 buttons)-->
+<hr>
+<div>
+<p>Hide me #2 — Check it out - show or hide the text below using the button you see:</p>
+<div id="hidethis" class="showit">
+<p>You can both hide or make this sentence reappear using the button below.</p>
+</div>
+<hr>
+<button id="show-btn" class="show-btn">Hide/Reappear</button>
+
+<!-- Steps:
+1) click
+2a) determine if the div is visible
+ the div is visile if the following is true:
+2b) If visible, hide it.
+3) If else, make it visible -->
+
+<!-- Version D -->
+<script type ="text/javascript">
+	var isShowing = false;
+	// First anonymous function hides the div
+	document.getElementById('show-btn').onclick = function(){
+		if(isShowing == true){
+		document.getElementById('hidethis').style.display = 'none';
+		isShowing = false;}
+		else{
+		document.getElementById('hidethis').style.display = 'block';
+		isShowing = true;}
+	};
+	</script>
+
+</html>
