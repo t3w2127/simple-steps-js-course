@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+</head>
+<body>
+<style>
+p {
+	padding-top: 10px;
+	padding-bottom: 5px;
+	font-family: sans-serif, arial, verdana;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 17px;
+	line-height: 17px;
+}
+
+.sum-btn{
+	background-color: #3089c9;
+	text-align: center;
+	color: white;
+	padding: 3px;
+	border-radius: 5px;
+	font-size: 17px;
+}
+#mydiv{
+	transition: opacity 1s;
+}
+
+#mydiv2{
+	transition: color 2s;
+}
+
+#mydiv3{
+	display: inline-block;
+	background: red;
+	padding: 30px;
+	transition: transform 0.2s;
+}
+#mydiv4{
+	transition: all 0.2s;
+}
+.highlight{
+	background-color: yellow;
+	padding: 20px;
+}
+</style>
+
+<!-- Example #1-->
+<h2>Example #1</h2>
+<div id="mydiv">This div will fade in and out.</div>
+<button id="fadeout">Fade out</button>
+<button id="fadein">Fade in</button>
+
+<script>
+// store the div in a variable so you don't have to keep typing it
+var mydiv = document.getElementById('mydiv');
+
+// fade out
+document.getElementById('fadeout').onclick = function(){
+	mydiv.style.opacity ='0';
+};
+
+// fade in
+document.getElementById('fadein').onclick = function(){
+	mydiv.style.opacity = '1';
+};
+</script>
+<hr>
+<br><br><br>
+<!-- Example #2-->
+<h2>Example #2</h2>
+<div id="mydiv2">In this div the color fades in & out.</div>
+<button id="turnred">Turn red</button>
+<button id="turnblue">Turn blue</button>
+
+<script>
+var colorDiv=document.getElementById('mydiv2');
+
+document.getElementById('turnred').onclick = function(){
+	colorDiv.style.color = 'red';};
+document.getElementById('turnblue').onclick = function(){
+	colorDiv.style.color = 'blue';};
+</script>
+<hr>
+<br><br><br>
+<!-- Example #3-->
+<h2>Example #3</h2>
+<div id="mydiv3">This is such a beautiful car.</div>
+<br><br>
+<button id="move100">Move to 100</button>
+<button id="move400">Move to 400</button>
+
+<script>
+var moveDiv = document.getElementById('mydiv3');
+document.getElementById('move100').onclick = function(){
+	moveDiv.style.transform = 'translateX(100px)';};
+document.getElementById('move400').onclick = function(){
+	moveDiv.style.transform = 'translateX(400px)';};
+</script>
+<hr>
+<br><br><br>
+<!-- Example #4-->
+<h2>Example #4</h2>
+<div id="mydiv4"> This is the div.</div>
+<button id="blue">Blue</button>
+<button id="redgold">Red and gold</button>
+
+<script>
+var colorDiv1 = document.getElementById('mydiv4');
+document.getElementById('blue').onclick = function(){
+	colorDiv1.style.color = 'blue';
+	colorDiv1.style.backgroundColor = 'transparent';
+	colorDiv1.padding = '0px';};
+
+document.getElementById('redgold').onclick = function(){
+	colorDiv1.style.color = 'red';
+	colorDiv1.style.backgroundColor = 'gold';
+	colorDiv1.style.padding = '40px';};
+</script>
+<hr>
+<br><br><br>
+<!-- Example #5-->
+<h2>Example #5</h2>
+<div id="mydiv5"> This is the div for example #5.</div>
+<button id="unhighlight">Unhighlight</button>
+<button id="highlight">Highlight</button>
+
+<script>
+var div5 = document.getElementById('mydiv5');
+document.getElementById('unhighlight').onclick = function(){
+	div5.className = '';};
+
+document.getElementById('highlight').onclick = function(){
+	div5.className = 'highlight';};
+</script>
+
+</html>
