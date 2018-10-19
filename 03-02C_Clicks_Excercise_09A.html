@@ -57,20 +57,53 @@ p {
 <hr/>
 <p>Want free points? Click the button below to get more!</P>
 <div>
-<span id="addingones"><p>0</p></span
+<p><span id="output">0</span></p>
 </div>
 <button id="numgame" class="sum-btn">Click me for points</button>
 <hr>
 </div>
 
+<!-- Steps:
+1) onclick
+2a) Determine if score is zero and less than 5
+2b) If score is less than 5 add 1 with each click
+2c) Else, if score is equal to 5
+  - say game over
+  - reset score to zero
+-->
+
+<!-- Version A -->
 <script>
-function addPoints(){
-	var points = 0++;
+var a = 0; // stores zero plus added value
+document.getElementById('numgame').onclick = function(){
+	if((a==0) || (a<5)){
+		a += 1;
+		document.getElementById('output').innnerHTML = 'Your score is noq '+a+'-- keep going!';
+		console.log('Variable a = ' +a)
+	}
+	else{
+		a = 0;
+		document.getElementById('output').innerHTML = 'Game over! Score is reset to '+a+'.'; 
+	}
+  };
+  </script>
+
+<!-- Version B-->
+<!-- <script>
+
+function points(a, b){
+	var pointsPlus: 0; // stores zero
+	var points = pointsPlus++; // adds 1 to pointsPlus 0 starting point
+		document.getElementById('addingones').innnerHTML = 'Your score: ' +points;
 }
-	document.getElementById('hideme2').onclick = function(){
+function.getElementById('numgame').onclick = function(){
+		if(points == 0){
+			document.get
+
+		}
 
 };
-</script>
+</script> --> 
 
 
 </html>

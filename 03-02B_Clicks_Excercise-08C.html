@@ -105,84 +105,16 @@ p {
 
 <!-- Version D -->
 <script type ="text/javascript">
-var isShowing = true;
-// First anonymous function hides the div
-document.getElementById('show-btn').onclick = function(){
-	if(isShowing === true){
-	document.getElementById('hidethis').style.display = 'none';
-	isShowing = false;}
-	if(isShowing === false){
-	document.getElementById('hidethis').style.display = 'block';
-	isShowing = true;}
-};
-</script>
-
-
-
-<!-- Version C -->
-<!-- <script>
-/*function hideStuff(divid){
-	document.getElementById('hide').style.display = "none";}
-
-function showStuff(divid){
-	document.getElementById('hide').style.display = "block";} */
-
-var divShow = 'block';
-var divHide = 'none';
-// First anonymous function hides the div
-document.getElementById('hide-btn').onclick = function(){
-	if ((className = 'showit') && (divShow)){
-	document.getElementById('hide').style.display = 'none';}
-	if((className == 'show-btn') || (divShow)){
-		document.getElementById('hide').style.display = 'none';}
-	else{
-		document.getElementById('hide-btn').style.display = 'block';}
-		//else/*if(className = 'hide-button')*/{
-			//document.getElementById('show-btn').style.display = 'block';}
-};
-</script> -->
-
-
-
-<!-- Version B -->
-<!--
-<script>
-// var divDisplay = getElementsByClassName('showit');
-// var divHide = getElementsByClassName('hideit');
-
-// First anonymous function hides the div
-document.getElementById('hide-btn').onclick = function(){
-	if (className = 'showit'){
-	document.getElementById('hide').style.display = 'none';}
-	if( className = 'show-btn'){
-		document.getElementById('hide-btn').style.display = 'none';}
-		else/*if(className = 'hide-button')*/{
-			document.getElementById('show-btn').style.display = 'block';}
-};
-</script> -->
-
-
-<!-- Version A (Doesn't work)
-<script>
-// First anonymous function hides the div
-document.getElementById('hide-btn').onclick = function(){
-	if (className = 'showit'){
-	document.getElementById('hide').style.display = 'none';}
-	if(className = 'show-btn'){
-		document.getElementById('hide-btn').style.display = 'none';}
-		if(className = 'hide-button'){
-			document.getElementById('show-btn').style.display = 'block';}
-};
-</script>
-
-<script>
-//Second anonymous funciton shows 2nd div after it gets hidden
-document.getElementById('hide-btn').onclick = function(){
-	if (className = 'hide-btn'){
-	document.getElementById('hide-btn').style.display = 'block';}
-	if (className = 'showit'){
-		document.getElementById('hide').style.display = 'block';}
-};
-</script> -->
+	var isShowing = false;
+	// First anonymous function hides the div
+	document.getElementById('show-btn').onclick = function(){
+		if(isShowing == true){
+		document.getElementById('hidethis').style.display = 'none';
+		isShowing = false;}
+		else{
+		document.getElementById('hidethis').style.display = 'block';
+		isShowing = true;}
+	};
+	</script>
 
 </html>

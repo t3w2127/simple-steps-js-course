@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+</head>
+<body>
+<style>
+p {
+	padding-top: 10px;
+	padding-bottom: 5px;
+	font-family: sans-serif, arial, verdana;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 17px;
+	line-height: 17px;
+}
+
+.sum-btn{
+	background-color: #3089c9;
+	text-align: center;
+	color: white;
+	padding: 3px;
+	border-radius: 5px;
+	font-size: 17px;
+}
+
+.greenborder{
+	border-width: 3px;
+	border-color: chartreuse;
+}
+
+.slightborder{
+	border-width: 2px;
+	border-color: gray;
+}
+.notext{
+	border-width: 3px;
+	border-color: red;
+}
+</style>
+
+<!-- Exercise #1 -->
+<div style="padding-top:30px;">
+<hr/>
+<p>Type your name in the box:</p>
+<input id="mytext" type="text">
+<div id="output"></div>
+<hr>
+</div>
+<script>
+document.getElementById('mytext').onkeyup = function(){
+	var nameOne = document.getElementById('mytext').value;
+	document.getElementById('output').innerHTML = "Hello "+nameOne;
+};
+</script>
+
+<!-- Exercise #2 -->
+<div style="padding-top:30px;">
+		<hr>
+		<p>What's your favorite color?</p>
+		<input class="slightborder" id="mycolor" type="text">
+		<div id="output2"></div>
+		<hr>
+		</div>
+
+<script>
+document.getElementById('mycolor').onfocus = function(){
+	document.getElementById('mycolor').className = 'greenborder';
+};
+	document.getElementById('mycolor').onblur = function(){
+		document.getElementById('mycolor').className = 'slightborder';
+};
+</script>
+
+<!-- Exercise #3 -->
+<div style="padding-top:30px;">
+	<hr>
+	<p>Type something</p>
+	<input class="slightborder" id="a" type="text">
+	<div id="output3"></div>
+	<hr>
+	</div>
+
+<!-- Do the following
+Determine is the field blank?
+1) If field has text, keep style
+2) Else (field is blank) turn border red
+-->
+
+<script>
+document.getElementById('a').onkeyup = function(){
+	var inputCheck = document.getElementById('a').value;
+	var inputFalse = inputCheck == "";
+	if(inputFalse){
+		document.getElementById('a').className = 'notext';
+		document.getElementById('output3').innerHTML = 'Please enter some text!';
+	}
+	else{
+		document.getElementById('a').className = 'slightborder';
+		document.getElementById('output3').innerHTML = 'You typed: '+inputCheck;
+	}
+};
+</script>

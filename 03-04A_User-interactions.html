@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+</head>
+<body>
+<style>
+p {
+	padding-top: 10px;
+	padding-bottom: 5px;
+	font-family: sans-serif, arial, verdana;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 17px;
+	line-height: 17px;
+}
+
+.sum-btn{
+	background-color: #3089c9;
+	text-align: center;
+	color: white;
+	padding: 3px;
+	border-radius: 5px;
+	font-size: 17px;
+}
+</style>
+
+<!-- Example 1-->
+<div style="padding-top:30px;">
+<hr/>
+<input id="mytext" type="text">
+<div id="output"></div>
+<hr>
+</div>
+<script>
+    document.getElementById('mytext').onkeyup = function(){
+        var text = document.getElementById('mytext').value; 
+        document.getElementById('output').innerHTML = text;
+    };
+</script>>
+
+<!-- Example #2 -->
+<input id="mytext2" type="text">
+<div id="output2"> </div>
+<script>document.getElementById('mytext2').onfocus=function(){document.getElementById('output2').innerHTML = 'text box selected';};document.getElementById('mytext2').onblur = function(){document.getElementById('output2').innerHTML = 'text box deselected';};</script>
+</html>
