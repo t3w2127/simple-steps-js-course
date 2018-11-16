@@ -1,0 +1,87 @@
+<style>
+body {
+	padding-top: 10px;
+	padding-bottom: 5px;
+	font-family: sans-serif, arial, verdana;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 17px;
+	line-height: 17px;
+}
+
+p{ 
+    padding-top: 10px;
+	padding-bottom: 5px;
+	font-family: sans-serif, arial, verdana;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 17px;
+	line-height: 17px;
+}
+
+h1{
+    padding-top: 10px;
+    font-family: sans-serif, arial, verdana;
+    font-size: 28px;
+    color: #2a8391;
+}
+
+h2{
+    padding-top: 10px;
+    font-family: sans-serif, arial, verdana;
+    font-size: 24px;
+    color: #486d26;
+}
+
+h3{
+    padding-top: 10px;
+    font-family: sans-serif, arial, verdana;
+    font-size: 20px;
+}
+.sum-btn{
+	background-color: #3089c9;
+	text-align: center;
+	color: white;
+	padding: 3px;
+	border-radius: 5px;
+	font-size: 17px;
+}
+#mydiv{
+	transition: opacity 1s;
+}
+
+#mydiv2{
+	transition: color 2s;
+}
+
+#mydiv3{
+	display: inline-block;
+	padding: 30px;
+	transition: transform 0.2s;
+}
+#mydiv4{
+	transition: all 0.2s;
+}
+#magdiv{
+	font-family: sans-serif, arial, verdana;
+	background-color: darkolivegreen;
+	color:darkkhaki;
+	width: 100px;
+	height: 100px;
+	margin-bottom: 15px;
+	transition: all 0.2s;
+}
+.highlight{
+	background-color: yellow;
+	padding: 20px;
+}
+
+.post{
+	padding: 20px;
+	margin: 20px;
+	max-width: 800px;
+	background: #eee;
+}
+
+
+</style>

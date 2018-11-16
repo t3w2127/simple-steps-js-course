@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>This is practice</h1>
+<hr>
+<h2>Example #1</h2>
+<script> 
+var car = {speed: 30, drive: function(){
+	var speed = this.speed; 
+	console.log("I'm driving at "+speed+ " mph.");}};
+car.drive();
+</script>
+<hr>
+<h2>Example #2 | driveFaster</h2>
+<script>
+var car = {
+	speed:30,
+	drive: function(){
+		var speed =  this.speed;
+		console.log("I'm driving at "+speed+" mph.");},
+		driveFaster(){
+			this.speed+=10;
+			this.drive(); 
+		}
+	};
+	car.drive();
+	car.driveFaster();
+</script>
+
+<hr>
+<h2>Example #3 | More useful stuff to do with "THIS"</h2>
+<div id="mytext">Click on this text</div>
+<script> 
+document.getElementById('mytext').onclick = function(){
+	this.style.color = 'red';
+}; 
+</script>
+
+<hr/>
+<div class="flex-container">
+<div>
+<h2>Excercises #1 | Shoe with size change via methods</h2>
+<p>Click on the shoe size number to make it get larger or smaller:</p>
+</div>
+<div id="shoe"></div>
+<div>
+<p><span id="smaller"><button>Smaller</button></span> | <span id="bigger"><button>Bigger</button></span></p>
+</div>
+</div>
+<script>
+var shoe = {
+	size: 5, 
+	sizeDisplay: function(){document.getElemenById('shoe').innerHTML = '<p>'+shoe.size+'</p>';},
+
+	// click on div and make the size get bigger
+	bigger: function(){
+		document.getElementbyId('shoe').onclick = function(){ 
+		if((this.size<=0) || (this.size>13)){
+		this.size += 1;}
+		else{
+			this.style.color = 'red';}
+	}}, 
+	// click on div and make the size get smaller
+	smaller: function(){
+		document.getElementById('shoe').onclick = function(){
+		if((this.size==13) && (this.size>12)){
+			this.size -= 1;}
+		else{
+			this.syle.color = 'red';}},
+	shoe.sizeDisplay();
+	shoe.bigger();
+	shoe.smaller();
+</script>
+</body>
+</html>

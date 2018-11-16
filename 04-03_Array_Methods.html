@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>This is practice</h1>
+<hr>
+<h2>Push & pop methods</h2>
+<script>
+var names=['Optimus', 'Buzz', 'Elmo'];
+console.log('names before the push: '+names);
+
+names.push('Kermit');
+console.log('names after the push: '+names);
+
+names.pop();
+console.log('names after the pop: '+names);
+</script>
+<hr>
+<h2>Unshift + shift</h2>
+<script>
+var names1 = ['Optimus', 'Buzz', 'Elmo'];
+console.log('Names before the push: '+names);
+
+names.unshift('Kermit');
+console.log('Names after the unshift: '+names);
+
+names.shift();
+console.log('Names after the shift: '+names);
+</script>
+
+<hr>
+<h2>Pop and shift — how they work example</h2>
+<script>
+var deck = ['Ace', 'Queen', 'Joker'];
+console.log('deck of cards before the pop: '+ deck);
+
+var pickedCard = deck.pop();
+
+console.log('Deck of cards after the pop: ' + deck);
+console.log('Picked card is: ' + pickedCard);
+</script>
+<hr>
+<h1>Excercises</h1>
+
+<h2>Excercise #1: Push & pop</h2>
+<div id="clouds"></div>
+<div id="happy"></div>
+<div id="movies"></div>
+
+<script>
+var clouds = ['Cumulus', ' Cirrus', ' Polar'];
+console.log('These are clouds you see in the sky: '+clouds);
+clouds.push(' Stratus');
+document.getElementById('clouds').innerHTML = '<p>These are the clouds you see most often: '+clouds+'</p>';
+</script>
+<script>
+var happy =['bliss', ' joy', ' wicked awesome', ' super cool'];
+happy.push(' dope');
+document.getElementById('happy').innerHTML = '<p>Different ways of describing the word \'happy\' is using these words: '+happy+'.</p>';
+</script>
+<script>
+var movies = ['Batman', ' Superman', ' Love Actually', ' Joy'];
+movies.push(' The Lego Movie');
+document.getElementById('movies').innerHTML = '<p>Some movies we like watching: '+movies+'.</p>'
+</script>
+<hr>
+<h2>Excercise #2: Shift & unshift</h2>
+<div id="unshift1"></div>
+<div id="unshift2"></div>
+<div id="unshift3"></div>
+<script>
+var unshift1 = ['1', ' 2', ' 3', ' 4'];
+unshift1.unshift(' 7');
+unshift1.shift();
+document.getElementById('unshift1').innerHTML = '<p>Here\'s a sequence of numbers: '+unshift1+'.</p>';
+</script>
+<script>
+var unshift2 = [' class', ' classy', ' classical', ' classic'];
+unshift2.unshift(' dope');
+unshift2.shift();
+document.getElementById('unshift2').innerHTML = '<p>Derivatives of the word \'class\':'+unshift2+'.</p>';
+</script>
+<script>
+var unshift3 = [' 3', ' 6', ' 9', ' 12' ];
+unshift3.unshift(' 18');
+//unshift3.shift();
+document.getElementById('unshift3').innerHTML = '<p>Multiples of 3: '+unshift3+'.</p>';
+</script>
+<hr>
+<h2>Excercise #3: Reverse order of an array</h2>
+<div id="reverse1"> </div>
+<div id="reverse"> </div>
+<script>
+var list1 = [' doodle', ' laugh', ' cry', ' dance', ' fly']
+listContent = '';
+var reversed = list1.reverse();
+for(a=0; a<reversed.length; a++){
+
+	listContent += '<p>'+reversed[a]+'</p>';
+}
+document.getElementById('reverse1').innerHTML = '<p>Here is my original list reversed:</p>';
+document.getElementById('reverse').innerHTML = listContent;
+</script>
+</html>

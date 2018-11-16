@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>This is practice</h1>
+<script>
+for(var x=20; x<1200; x=x+20){
+	console.log(x);
+}
+</script>
+<hr>
+<h2>Array #1</h2>
+<script>
+var names = ['Bowser', 'Ganon', 'Shumbulock'];
+console.log(names.length);
+</script>
+
+<script>
+var names1 = ['Brandon', 'Jeff', 'Shannon'];
+names1[1] = 'Link';
+names1[3] = 'Luigi';
+names1[6] = 'Hogwarts';
+console.log(names1[6]);
+console.log(names1.length);
+</script>
+<hr>
+<h2>Array #2</h2>
+<script>
+var x = 'this is x';
+var stuff = ['strings work',12, x, ['inner array item 1',  'inner array item 2'], 'last item'];
+
+console.log( stuff[0] );
+console.log( stuff[1] );
+console.log( stuff[2] );
+console.log( stuff[3] );
+console.log( stuff[3][0] );
+console.log( stuff[3][1] );
+console.log( stuff[4] );
+</script>
+
+<!-- Putting a function inside an array -->
+<script>
+var stuff2 = ['first item', function(){ alert('Hi!'); }, 'last item'];
+console.log( stuff2[0] ); // string
+console.log( stuff2[1] ); // function
+stuff2[1](); // actually run the function 
+</script>
+
+<!-- How to loop through an array -->
+
+<script>
+var names2 = ['Bowser', 'Gannon', 'Joshua'];
+
+for(var i=0; i<names.length; i++){
+	console.log('Hello there ' + names[i]);
+}
+</script>
+
+<!-- Excercise #1 | practice typing arrays -->
+<script>
+var itemsEx = ['a', 'b', 'c'];
+</script>
+
+<script>
+var itemsEx = ['a', 'b', 'c'];
+</script>
+
+<script>
+var itemsEx = ['a', 'b', 'c'];
+</script>
+
+<script>
+var itemsEx = ['a', 'b', 'c'];
+</script>
+
+<script>
+var itemsEx = ['a', 'b', 'c'];
+</script>
+
+<script>
+var itemsEx = ['a', 'b', 'c'];
+</script>
+
+<script>
+var itemsEx = ['a', 'b', 'c'];
+</script>
+
+<script>
+var itemsEx = ['a', 'b', 'c'];
+</script>
+
+<script>
+var itemsEx = ['a', 'b', 'c'];
+</script>
+<hr>
+
+<!-- Excercise #2 | Create an array of any 3 items and display the first one in in a div + try displaying the second & third, too -->
+<h2>The fam</h2>
+<div id="names1"></div>
+<div id="names2"></div>
+<script>
+var itemsEx2 = ['Zoe', 'Natalie', 'Ella'];
+document.getElementById('names1').innerHTML = '<p>My daughter\'s name is '+itemsEx2[0]+'</p>';
+document.getElementById('names2').innerHTML = '<p>My wife\'s and cat\'s names are '+itemsEx2[1]+' and '+itemsEx2[2]+'</p>';
+</script>
+<hr>
+<!-- Excercise #3 | Create an array of two items and display the array's length in a div -->
+<h2>How many Disney moveie's do we own?</h2>
+<div><p>Total number # = <span id="total"></span></p></div>
+<script>
+var disList = ['Frozen','Blah', 'Blah'];
+document.getElementById('total').innerHTML = disList.length;
+</script>
+<hr>
+
+<!-- Excercise #4 | Create an array, change the falue of one of the items, and show the new value on screen (you can show it in a div or a span or any HTML element) -->
+<p>My emails are:</p> 
+<p><span id="email1">slamjam@gmail.com</span></p>
+<p><span id="email2">glipglop@gmail.com</span></p>
+<p><span id="email3">honkeydory@gmail.com</span></p>
+<p>But honkeydory@gmail.com has changed to <span id="newemail"></span></p>
+<script>
+var email1 = document.getElementById('email1').value;
+var email2 = document.getElementById('email1').value;
+var email3 = document.getElementById('email1').value;
+var email4 = document.getElementById('email1').value;
+var emailList = [email1, email2, email3, email4]
+emailList[2] = 'clonkywonky@gmail.com';
+document.getElementById('newemail').innerHTML = emailList[2];
+</script>
+<hr>
+
+<!-- Excercise #5 | 
+	A| Create an array of at least three names and use a loop to show a greeting to each one in a div.
+	
+	B| Repeat this exercise until you can loop through an array without looking at an example.
+ -->
+ <h2>Greeting…</h2>
+<div id="hello"></div>
+
+ <script>
+ var nameList = ['George', 'Hannah', 'Lisa'];
+ var content = '';
+ for(var i=0; i<nameList.length; i++){
+	content += '<div><p>Hello there, '+nameList[i]+'!</p></div>';
+	}
+	document.getElementById('hello').innerHTML = content;
+ </script>
+
+</html>

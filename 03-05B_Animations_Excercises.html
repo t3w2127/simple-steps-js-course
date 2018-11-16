@@ -46,7 +46,7 @@ p {
 	color:darkkhaki;
 	width: 100px;
 	height: 100px;
-	padding-bottom: 30px;
+	margin-bottom: 15px;
 	transition: all 0.2s;
 }
 .highlight{
@@ -93,16 +93,16 @@ document.getElementById('btn3').onclick = function(){
 <hr>
 <!-- Excercise #4-->
 <h2>Excercise #4 -- CHALLENGE!</h2>
-<div id="magdiv">Change me!</div>
+<div id="magdiv"></div>
 	<p>Check it out — Change the size of the box above by typing a number into the box below & clicking the button.</p>
-<br><br><br><input id="pxls" type="text">
-<br><button id="btn4">Change size</button>
+<input placeholder="# of pixels" id="pxls" type="text">
+<button class="sum-btn" id="btn4">Change size</button>
 <script>
 var magicInput = document.getElementById('magdiv');
 document.getElementById('btn4').onclick = function(){
-	var input1 = document.getElementById('pxls').value;
-	magicInput.style.height = 'input1';
-	magicInput.style.width = 'input1';};
+	var inputBox = document.getElementById('pxls').value;
+	magicInput.style.height = inputBox;
+	magicInput.style.width = inputBox;};
 </script>
 
 </html>
