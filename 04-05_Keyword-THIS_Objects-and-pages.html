@@ -41,41 +41,39 @@ document.getElementById('mytext').onclick = function(){
 	this.style.color = 'red';
 }; 
 </script>
-
+<br/>
+<br/>
 <hr/>
 <div class="flex-container">
 <div>
 <h2>Excercises #1 | Shoe with size change via methods</h2>
-<p>Click on the shoe size number to make it get larger or smaller:</p>
+<p>Click on the buttons to make your shoe size get larger or smaller:</p>
 </div>
 <div id="shoe"></div>
 <div>
-<p><span id="smaller"><button>Smaller</button></span> | <span id="bigger"><button>Bigger</button></span></p>
+<p><button id="smaller">Smaller</button> | <button id="bigger">Bigger</button></p>
 </div>
 </div>
 <script>
-var shoe = {
-	size: 5, 
-	sizeDisplay: function(){document.getElemenById('shoe').innerHTML = '<p>'+shoe.size+'</p>';},
-
-	// click on div and make the size get bigger
-	bigger: function(){
-		document.getElementbyId('shoe').onclick = function(){ 
-		if((this.size<=0) || (this.size>13)){
-		this.size += 1;}
-		else{
-			this.style.color = 'red';}
-	}}, 
-	// click on div and make the size get smaller
-	smaller: function(){
-		document.getElementById('shoe').onclick = function(){
-		if((this.size==13) && (this.size>12)){
-			this.size -= 1;}
-		else{
-			this.syle.color = 'red';}},
-	shoe.sizeDisplay();
-	shoe.bigger();
-	shoe.smaller();
-</script>
+	var shoe = {
+		size: 5, 
+		sizeDisplay: function(){document.getElementById('shoe').innerHTML = '<p>My shoe size is: '+this.size+'</p>';},
+	
+		// click on div and make the size get bigger
+		bigger: document.getElementById('bigger').onclick = function(){
+			if((this.size>=1) || (this.size<=13)){
+			this.size++;}
+			else{document.getElementById('shoe').style.color = 'red';}},
+	
+		// click on div and make the size get smaller
+		smaller: document.getElementById('smaller').onclick = function(){
+			if((this.size>=2) || (this.size<=13)){
+				this.size--;}
+			else{document.getElementById('shoe').style.color = 'red';}}};
+		shoe.sizeDisplay();
+		shoe.bigger();
+		shoe.smaller();	
+		console.log(shoe.size);
+	</script>
 </body>
 </html>

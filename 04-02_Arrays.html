@@ -6,150 +6,171 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<h1>This is practice</h1>
+<hr>
+<h2>These are the excercises…</h2>
+<hr>
+<h3>Excercise #1 | Typing array 3 times then 5 times more</h3>
 <script>
-for(var x=20; x<1200; x=x+20){
-	console.log(x);
+var items = ['a', 'b', 'c'];
+var items =['a', 'b', 'c'];
+var items = ['a', 'b', 'c'];
+var items = ['a', 'b', 'c'];
+var items = ['a', 'b', 'c'];
+var items = ['a', 'b', 'c'];
+var items = ['a', 'b', 'c'];
+var items = ['a', 'b', 'c'];
+var items = ['a', 'b', 'c'];
+</script>
+<br/>
+<hr>
+<h3>Excercise #2 | Create an array and show the first one in a div</h3>
+<div id="array-1"></div>
+<script>
+var listOne = ['coat', 'keys', 'wallet'];
+document.getElementById('array-1').innerHTML = '<p>Before I leave my house I make sure to wear a '+listOne[0]+' and I also make sure I have my '+listOne[1]+' and my '+listOne[2]+'.</p>';
+</script>
+
+<br/>
+<hr>
+<h3>Excercise #3 | Create an array and show the length in a div</h3>
+<div id="array-2"></div>
+<script>
+var arrayTwo = ['1', '2', '3', '4', '5','6','7'];
+document.getElementById('array-2').innerHTML = '<p>The total number of items in this array is equal to '+arrayTwo.length+'.</p>';
+</script>
+<br/>
+<hr>
+<h3>Excercise #4 | Create an array and change the value and show in an HTML element</h3>
+<div id="array-3"></div>
+<script>
+var arrayThree = ['one', 'two', 'three']; 
+arrayThree[1] = 'seven';
+document.getElementById('array-3').innerHTML = '<p>The second item in this array changed from "two" to "'+arrayThree[1]+'".</p>';
+</script>
+<br/>
+<hr>
+<h3>Excercise #5a | Create an array and use a loop to show in div</h3>
+<div id="array-4"></div>
+<script>
+names = '';
+var arrayFour = ['Holly', 'Ivy', 'Joshua', 'Zoe', 'Julia'];
+for(var i=0; i < arrayFour.length; i++){
+names += '<p>The name of this kid is '+arrayFour[i]+'.</p>';
+document.getElementById('array-4').innerHTML = names; 	
 }
 </script>
+
+<br/>
 <hr>
-<h2>Array #1</h2>
+<h3>Excercise #5b | Create an array and use a loop to show in div</h3>
+<div id="array-5"></div>
 <script>
-var names = ['Bowser', 'Ganon', 'Shumbulock'];
+var listOne = '';
+var array5B = ['Classy', 'Snazzy', 'Dope'];
+for(var b=0; b<array5B.length; b++){
+	listOne += '<p>When I want to describe something my favorite words to do so are in this order: '+array5B[b]+'.</p>';
+	document.getElementById('array-5').innerHTML = listOne;
+}
+</script>
+
+<br/>
+<hr>
+<h3>Excercise #5c | Create an array and use a loop to show in div</h3>
+<div id="array-6"></div>
+<script>
+var listTwo = '';
+var array5C = ['Howdy', 'Hi', 'Hello', 'Hola']; 
+for (var c=0; c<array5C.length; c++){
+listTwo += '<p>'+[c+1]+') '+array5C[c]+'.</p>';
+document.getElementById('array-6').innerHTML = listTwo;
+}
+</script>
+
+<br/>
+<hr>
+<h3>Excercise #5d | Create an array and use a loop to show in div</h3>
+<div id="array-7"></div>
+<script>
+	var a = '';
+	var array5D = ['Music', 'Tunes', 'Grooves', 'Joy']; 
+	for (b = 0; b<array5D.length; b++){
+		a+='<p>'+[b+1]+') '+array5D[b]+'</p>'};
+		document.getElementById('array-7').innerHTML = a;
+</script>
+
+<br/>
+<hr>
+<h3>Excercise #5e | Create an array and use a loop to show in div</h3>
+<div id="array-8"></div>
+<script>
+var a='';
+var b=['john', 'joe', 'jeff', 'jinga'];
+for (var c=0; c<b.length; c++){
+	a += '<p>'+[c+1]+') '+b[c]+'</p>';
+	document.getElementById('array-8').innerHTML = a;
+}
+</script>
+
+<br/>
+<hr>
+<h3>Excercise #5f | Create an array and use a loop to show in div</h3>
+<div id="array-9"></div>
+<script>
+	var a = '';
+	var b = ['Howdy', 'Holla', 'Yo', 'Groovy'];
+	for(var c=0; c<b.length; c++){
+		a += '<p>'+[c+1]+') '+b[c]+'</p>';
+		document.getElementById('array-9').innerHTML = a;
+	};
+</script>
+
+
+<br/>
+<hr>
+<h3>Excercise #5g | Create an array and use a loop to show in div</h3>
+<div id="array-10"></div>
+<script>
+var a ='';
+var b = ['Boston', 'San Francisco', 'Denver'];
+for(var c = 0; c<b.length; c++){
+	a += '<p>'+[c+1]+') '+b[c]+'</p>';
+	document.getElementById('array-10').innerHTML = a; 
+}
+</script>
+
+<br/>
+<br/>
+<br/>
+<h1>This is practice</h1>
+<hr>
+<h2>Example #1 | Array length</h2>
+<script>
+var names=['Bowser', 'Ganon', 'Hank'];
+names.length = 6;
 console.log(names.length);
 </script>
 
-<script>
-var names1 = ['Brandon', 'Jeff', 'Shannon'];
-names1[1] = 'Link';
-names1[3] = 'Luigi';
-names1[6] = 'Hogwarts';
-console.log(names1[6]);
-console.log(names1.length);
-</script>
 <hr>
-<h2>Array #2</h2>
+<h2>Example #2 | Changing values in an array</h2>
 <script>
-var x = 'this is x';
-var stuff = ['strings work',12, x, ['inner array item 1',  'inner array item 2'], 'last item'];
-
-console.log( stuff[0] );
-console.log( stuff[1] );
-console.log( stuff[2] );
-console.log( stuff[3] );
-console.log( stuff[3][0] );
-console.log( stuff[3][1] );
-console.log( stuff[4] );
+var nameX = ['Bowser', 'Gad', 'Gargle'];
+nameX[1] = 'Hank'; 
+console.log(nameX[1]);
+console.log(nameX[0]);
+console.log(nameX[2]);
 </script>
 
-<!-- Putting a function inside an array -->
-<script>
-var stuff2 = ['first item', function(){ alert('Hi!'); }, 'last item'];
-console.log( stuff2[0] ); // string
-console.log( stuff2[1] ); // function
-stuff2[1](); // actually run the function 
-</script>
-
-<!-- How to loop through an array -->
-
-<script>
-var names2 = ['Bowser', 'Gannon', 'Joshua'];
-
-for(var i=0; i<names.length; i++){
-	console.log('Hello there ' + names[i]);
-}
-</script>
-
-<!-- Excercise #1 | practice typing arrays -->
-<script>
-var itemsEx = ['a', 'b', 'c'];
-</script>
-
-<script>
-var itemsEx = ['a', 'b', 'c'];
-</script>
-
-<script>
-var itemsEx = ['a', 'b', 'c'];
-</script>
-
-<script>
-var itemsEx = ['a', 'b', 'c'];
-</script>
-
-<script>
-var itemsEx = ['a', 'b', 'c'];
-</script>
-
-<script>
-var itemsEx = ['a', 'b', 'c'];
-</script>
-
-<script>
-var itemsEx = ['a', 'b', 'c'];
-</script>
-
-<script>
-var itemsEx = ['a', 'b', 'c'];
-</script>
-
-<script>
-var itemsEx = ['a', 'b', 'c'];
-</script>
 <hr>
-
-<!-- Excercise #2 | Create an array of any 3 items and display the first one in in a div + try displaying the second & third, too -->
-<h2>The fam</h2>
-<div id="names1"></div>
-<div id="names2"></div>
+<h2>Example #3 | Put a function in an array</h2>
 <script>
-var itemsEx2 = ['Zoe', 'Natalie', 'Ella'];
-document.getElementById('names1').innerHTML = '<p>My daughter\'s name is '+itemsEx2[0]+'</p>';
-document.getElementById('names2').innerHTML = '<p>My wife\'s and cat\'s names are '+itemsEx2[1]+' and '+itemsEx2[2]+'</p>';
+var stuff = ['first item',
+			function(){ alert('hi'); },
+			'last item'];
+
+console.log( stuff[0] ); // string
+console.log( stuff[1] ); // function
+
+stuff[1](); // actually run the function
 </script>
-<hr>
-<!-- Excercise #3 | Create an array of two items and display the array's length in a div -->
-<h2>How many Disney moveie's do we own?</h2>
-<div><p>Total number # = <span id="total"></span></p></div>
-<script>
-var disList = ['Frozen','Blah', 'Blah'];
-document.getElementById('total').innerHTML = disList.length;
-</script>
-<hr>
-
-<!-- Excercise #4 | Create an array, change the falue of one of the items, and show the new value on screen (you can show it in a div or a span or any HTML element) -->
-<p>My emails are:</p> 
-<p><span id="email1">slamjam@gmail.com</span></p>
-<p><span id="email2">glipglop@gmail.com</span></p>
-<p><span id="email3">honkeydory@gmail.com</span></p>
-<p>But honkeydory@gmail.com has changed to <span id="newemail"></span></p>
-<script>
-var email1 = document.getElementById('email1').value;
-var email2 = document.getElementById('email1').value;
-var email3 = document.getElementById('email1').value;
-var email4 = document.getElementById('email1').value;
-var emailList = [email1, email2, email3, email4]
-emailList[2] = 'clonkywonky@gmail.com';
-document.getElementById('newemail').innerHTML = emailList[2];
-</script>
-<hr>
-
-<!-- Excercise #5 | 
-	A| Create an array of at least three names and use a loop to show a greeting to each one in a div.
-	
-	B| Repeat this exercise until you can loop through an array without looking at an example.
- -->
- <h2>Greeting…</h2>
-<div id="hello"></div>
-
- <script>
- var nameList = ['George', 'Hannah', 'Lisa'];
- var content = '';
- for(var i=0; i<nameList.length; i++){
-	content += '<div><p>Hello there, '+nameList[i]+'!</p></div>';
-	}
-	document.getElementById('hello').innerHTML = content;
- </script>
-
+</body>
 </html>

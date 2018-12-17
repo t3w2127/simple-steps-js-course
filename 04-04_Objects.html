@@ -7,116 +7,130 @@
 </head>
 <body>
 
-<h1>This is practice</h1>
+<h1>Objects: Handle data neatly and conveniently</h1>
+<br>
 <hr>
-<h2>Object properties</h2>
+<h2>Exercise sections</h2>
+<h3>#1 | Creating an object</h3>
+<script>var hat = {size: 3, color: 'green'};</script>
+<script>var hat = {size: 3, color: 'green'};</script>
+<script>var hat = {size: 3, color: 'green'};</script>
+<script>var hat = {size: 3, color: 'green'};</script>
+<script>var hat = {size: 3, color: 'green'};</script>
+<script>var hat = {size: 3, color: 'green'};</script>
+<script>var hat = {size: 3, color: 'green'};</script>
+<script>var hat = {size: 3, color: 'green'};</script> 
+<script> var hat = {size:3, color:'green'};</script>
+<script> var hat = {size: 3, color:'green'};</script>
+
+
+<h3>#2 | Getting an obeject property in 2 different ways</h3>
+<!--
+<script>	
+hat.size;
+hat['size'];
+hat.size;
+hat['size'];
+hat.size;
+hat['size'];
+hat.size;
+hat['size'];
+hat.size;
+hat['size'];
+hat.size;
+hat['size'];	
+</script>
+-->
+
+<h3>#3 | Car object — with three properties shown in divs</h3>
+<div id="car-color"></div>
+<div id="car-specs"></div>
 <script>
-var shirt = {size: 'medium', color: 'red', sleeveLength: 6};
+var car = {color: 'Red hot', size: 'Sport Coupe', engine: 'V8'}; 
+document.getElementById('car-color').innerHTML = '<p>My crazy dope car has a color that Ferrari calls '+car.color+'—ain\'t that fresh?</p>'
+document.getElementById('car-specs').innerHTML = '<p>This crazy dope car also has a '+car.engine+' and is a '+car.size+'. Can you dig my vibe?</p>'
+</script>
+
+<h3>#4 | Second Car object — with three properties (color, size, drive) and uses a method that shows "I'm driving!" in a div</h3>
+
+<p><b>Version #1</b></p>
+<div id="car2"></div>
+<div id="car-method-1"></div>
+<script>
+var car = {
+	color: 'red',
+	size: 'sport coupe',
+	drive: function(){
+		document.getElementById('car-method-1').innerHTML = '<p>I\'m driving!</p>';}
+}
+document.getElementById('car2').innerHTML = '<p>My car\'s color is '+car.color+' and it\'s a '+car.size+'.</p>';
+car.drive();
+</script>
+
+<p><b>Version #2</b></p>
+<div id="car3"></div>
+<div id="car-method-2"></div>
+<script>
+var car = {
+	color: 'silver',
+	size: 'sedan',
+	drive: function(){
+		document.getElementById('car-method-2').innerHTML = '<p>I\'m flying…I mean driving!</p>';}
+}
+document.getElementById('car3').innerHTML = '<p>My car is '+car.color+' and it is a '+car.size+'.</p>';
+car.drive(); 
+</script>
+
+<p><b>Version #3</b></p>
+<div id="car4"></div>
+<div id="car-method-3"></div>
+<script>
+var car = {
+	color: ' silver';
+	make: ' Honda';
+	style: ' CR-V';
+	drive: function(){
+		document.getElementById('car-method-3').innerHTML = '<p>Dude! I\'m totally flying high right now at  80mph!</p>';}
+}
+document.getElementById('car4').innerHTML = '<p>My car is '+car.color+' and is a '+car.make+car.style+'.</p>';
+car.drive();
+</script>
+
+<br>
+<hr>
+<h2>Example sections</h2>
+<h3>Object properties</h3>
+<!--Object properties | Example 1 -->
+<script>
+var shirt = {size:'medium', color:'red', sleeveLength: 6};
 console.log(shirt.size);
 console.log(shirt['size']);
 </script>
-<hr>
-<h2>Object properties | Language list</h2>
+<!--Object properties | Example 2 -->
 <script>
 var language = 'English';
-var greeting = {English: 'Hi', Spanish: 'Hola'};
+var greeting = {English: 'hi', Spanish: 'hola'};
 console.log(greeting[language]);
 </script>
-<hr>
-<h2>Object properties | Functions in obects = method</h2>
-<script>
-var bird = {color: 'blue', face: 'so majestic', fly: function(){console.log("I'm Flying!");}};
-bird.fly();
+<h3>Methods: Functions within objects</h3>
+<script> 
+var bird = {
+	color: 'blue', 
+	face: 'so majestic', 
+	fly: function(){
+		console.log("I'm flying!");
+	}};
+	bird.fly();
 </script>
-
 <script>
-var person = {name: 'Luigi', greet: function(otherperson){console.log('Hello '+otherperson);},favoriteColor: 'green'};
+var person = {
+	name: 'Luigi',
+	greet: function(otherperson){
+		console.log('Hello '+otherperson);
+	},
+	favoriteColor: 'green'
+};
 person.greet('Bowser');
 </script>
-<hr>
-<h2>Excercises #1 | Creating object</h2>
-<script>
-var hat = {size: 3, color: 'green'};
-var hat = {size: 3, color: 'green'};
-var pants = {size: 36, color: 'blue'};
-var shirt = {size: 'Medium', color: 'blue'};
-</script>
-<hr>
-<h2>Excercises #2 | Object property</h2>
-<script>
-hat.size;
-hat['size']
-hat.size
-hat['size']
-hat.size
-hat['size']
-hat.size
-hat['size']
-</script>
-<hr>
-<h2>Excercises #3 | Car object</h2>
-<div id="car1"></div>
-<div id="carcolor1"></div>
-<script>
-var car = {color: 'red', size:'coupe', engine: 'v6'};
-document.getElementById('car1').innerHTML = '<p>Check out my dope car!</p>';
-document.getElementById('carcolor1').innerHTML = '<p>My car\'s color is: '+car.color+' and has a sweet '+car.engine+' engine!</p>'
-</script>
-<hr>
-<h2>Excercises #4 | Car object + a method</h2>
-<div id="car2"></div>
-<div id="cardrive"></div>
-<div id="car3"></div>
-<div id="fastcar"></div>
-<div id="bmw"></div>
-<script> 
-var dopeCar = {color: 'Racing green', size: 'Coupe', engine: 'v8',
-	drive: function(message){
-		document.getElementById('cardrive').innerHTML = '<p>I\'m driving my super dope '+dopeCar.color+' Ferrari on the highway. Its '+dopeCar.engine+' engine takes me to 80 mph in 6 seconds!</p>'}}; 
-dopeCar.drive(); 
-</script>
-<script>
-var fastCar = {color: 'Red hot', size: 'Hatchback', drive2: function(message){
-	document.getElementById('fastcar').innerHTML = '<p>I\'m driving my '+fastCar.color+' car because it\'s a crazy cool '+fastCar.size+' and it flies on the highway!</p>'}};
-	fastCar.drive2(); 
-</script>
-
-<script>
-var coolCar = {make: 'BMW', model: '750i', engine: 'v8', drive: function(message){
-	document.getElementById('bmw').innerHTML = '<p>I love to drive my '+coolCar.make+' on the highway because it passes other cars easily. Its a '+coolCar.model+' and it has a '+coolCar.engine+' which makes it fly.</p>'}};
-	coolCar.drive();
-</script>
-
-<hr>
-<h2>Excercises #5 | Person object + a greet method using a parameter</h2>
-<div id="greet"></div>
-<div id="greet2"></div>
-<div id="greet3"></div>
-<div id="greet4"></div>
-<script> 
-var person = {favoriteColor: 'orange', 
-greeting: function(name){
-	document.getElementById('greet').innerHTML = '<p>Hey there '+name+'! Hey, is your favorite color still '+person.favoriteColor+'?</p>';}
-	};
-person.greeting('Bob');
-</script>
-
-<script>
-var person2 = {favoriteColor: 'lavender', greet: function(howdy){
-	document.getElementById('greet2').innerHTML = '<p>Hey there '+howdy+'! I was wondering if your favorite color is still '+person2.favoriteColor+'?</p>'}};
-	person2.greet('Georgia'); 
-</script>
-
-<script>
-var person3 = {favColor: 'maroon', greeting: function(name){
-	document.getElementById('greet3').innerHTML = '<p>Hola, '+name+'! Can you tell me if your favorite color is still '+person3.favColor+'?</p>'}};
-	person3.greeting('Frankenstein');
-</script>
-
-<script>
-var person4 = {c: 'ultra-marine', greet: function(name){
-	document.getElementById('greet4').innerHTML = '<p>Yo, '+name+'! Could you tell me if the color I\'m seeing on the top of that magazine is '+person4.c+' or not?</p>'}};
-	person4.greet('Jasmine');
-</script>
-
+</body>
 </html>
