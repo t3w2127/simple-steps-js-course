@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Objects: Handle data neatly and conveniently</h1>
+<br>
+<hr>
+<h2>Exercise sections</h2>
+<h3>#1 | Creating an object</h3>
+<script>var hat = {size: 3, color: 'green'};</script>
+<script>var hat = {size: 3, color: 'green'};</script>
+<script>var hat = {size: 3, color: 'green'};</script>
+<script>var hat = {size: 3, color: 'green'};</script>
+<script>var hat = {size: 3, color: 'green'};</script>
+<script>var hat = {size: 3, color: 'green'};</script>
+<script>var hat = {size: 3, color: 'green'};</script>
+<script>var hat = {size: 3, color: 'green'};</script> 
+<script> var hat = {size:3, color:'green'};</script>
+<script> var hat = {size: 3, color:'green'};</script>
+
+
+<h3>#2 | Getting an obeject property in 2 different ways</h3>
+<!--
+<script>	
+hat.size;
+hat['size'];
+hat.size;
+hat['size'];
+hat.size;
+hat['size'];
+hat.size;
+hat['size'];
+hat.size;
+hat['size'];
+hat.size;
+hat['size'];	
+</script>
+-->
+
+<h3>#3 | Car object — with three properties shown in divs</h3>
+<div id="car-color"></div>
+<div id="car-specs"></div>
+<script>
+var car = {color: 'Red hot', size: 'Sport Coupe', engine: 'V8'}; 
+document.getElementById('car-color').innerHTML = '<p>My crazy dope car has a color that Ferrari calls '+car.color+'—ain\'t that fresh?</p>'
+document.getElementById('car-specs').innerHTML = '<p>This crazy dope car also has a '+car.engine+' and is a '+car.size+'. Can you dig my vibe?</p>'
+</script>
+
+<h3>#4 | Second Car object — with three properties (color, size, drive) and uses a method that shows "I'm driving!" in a div</h3>
+
+<p><b>Version #1</b></p>
+<div id="car2"></div>
+<div id="car-method-1"></div>
+<script>
+var car = {
+	color: 'red',
+	size: 'sport coupe',
+	drive: function(){
+		document.getElementById('car-method-1').innerHTML = '<p>I\'m driving!</p>';}
+}
+document.getElementById('car2').innerHTML = '<p>My car\'s color is '+car.color+' and it\'s a '+car.size+'.</p>';
+car.drive();
+</script>
+
+<p><b>Version #2</b></p>
+<div id="car3"></div>
+<div id="car-method-2"></div>
+<script>
+var car = {
+	color: 'silver',
+	size: 'sedan',
+	drive: function(){
+		document.getElementById('car-method-2').innerHTML = '<p>I\'m flying…I mean driving!</p>';}
+}
+document.getElementById('car3').innerHTML = '<p>My car is '+car.color+' and it is a '+car.size+'.</p>';
+car.drive(); 
+</script>
+
+<p><b>Version #3</b></p>
+<div id="car4"></div>
+<div id="car-method-3"></div>
+<script>
+var car = {
+	color: ' silver',
+	make: ' Honda',
+	style: ' CR-V',
+	drive: function(){
+		document.getElementById('car-method-3').innerHTML = '<p>Dude! I\'m totally flying high right now at  80mph!</p>';}
+}
+document.getElementById('car4').innerHTML = '<p>My car is '+car.color+' and is a '+car.make+car.style+'.</p>';
+car.drive();
+</script>
+
+
+<br>
+<h3>#5 | Person object with favorite color and a method of greet — greet takes in parameter of 'name' and shows the greeting in a div</h3>
+<p><b>Version #1</b></p>
+<div id="greet"></div>
+<script>
+var person = {
+	favoriteColor: 'violet',
+	favoriteShow: 'Seinfeld',
+	favoriteMusic: 'Electronica',
+	greet: function(person2){
+		document.getElementById('greet').innerHTML = '<p>Hi there '+person2+'! I\'m so glad you asked what things I like. My favorite color is '+person.favoriteColor+', my favorite show is '+person.favoriteShow+', and my favorite music is '+person.favoriteMusic+'.</p>';}
+}
+person.greet('Josh');
+</script>
+
+<p><b>Version #2</b></p>
+<div id="greet2"></div>
+<script>
+	var person = {
+		color: 'purple',
+		favoriteShow: ' Transformers',
+		greet: function(other){
+			document.getElementById('greet2').innerHTML = '<p>Hi '+other+'! My favorite color is '+person.color+', and my favorite show is '+person.favoriteShow+'.</p>';}
+	}
+	person.greet('Jeff');
+</script>
+
+<br>
+<hr>
+<h2>Example sections</h2>
+<h3>Object properties</h3>
+<!--Object properties | Example 1 -->
+<script>
+var shirt = {size:'medium', color:'red', sleeveLength: 6};
+console.log(shirt.size);
+console.log(shirt['size']);
+</script>
+<!--Object properties | Example 2 -->
+<script>
+var language = 'English';
+var greeting = {English: 'hi', Spanish: 'hola'};
+console.log(greeting[language]);
+</script>
+<h3>Methods: Functions within objects</h3>
+<script> 
+var bird = {
+	color: 'blue', 
+	face: 'so majestic', 
+	fly: function(){
+		console.log("I'm flying!");
+	}};
+	bird.fly();
+</script>
+<script>
+var person = {
+	name: 'Luigi',
+	greet: function(otherperson){
+		console.log('Hello '+otherperson);
+	},
+	favoriteColor: 'green'
+};
+person.greet('Bowser');
+</script>
+</body>
+</html>

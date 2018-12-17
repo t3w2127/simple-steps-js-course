@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Array methods</h1>
+<hr>
+<h2>These are the excercises…</h2>
+<br>
+<hr>
+<h3>Excercise #1 | Create several arrays and use push & pop</h3>
+<div id="pop1"></div>
+<div id="pop2"></div>
+<script>
+var listPopOne = ['a', 'b', 'c'];
+listPopOne.push('d');
+document.getElementById('pop1').innerHTML = '<p>'+listPopOne+'</p>';
+var missedLetter = listPopOne.pop(); 
+document.getElementById('pop2').innerHTML = '<p>'+missedLetter+'</p>';
+</script>
+<div id="pop3"></div>
+<div id="pop4"></div>
+<script>
+var listOne = ['1', '3', '5', '7'];
+listOne.push('007');
+document.getElementById('pop3').innerHTML = '<p>'+listOne+'</p>'; 
+var newTwo=listOne.pop(); 
+document.getElementById('pop4').innerHTML = '<p>'+newTwo+'</p>'
+</script>
+<div id="pop5"></div>
+<div id="pop6"></div>
+<script>
+var listOne = ['Mary', ' Jesus', ' Joseph', ' Wise men'];
+listOne.push(' and then curious onlookers at the manger');
+document.getElementById('pop5').innerHTML = '<p>'+listOne+'</p>';
+var listPop = listOne.pop();
+document.getElementById('pop6').innerHTML = '<p>'+listPop+'</p>'; 
+</script>
+<br>
+<hr>
+<h3>Excercise #2 | Create several arrays and use shift & unshift</h3>
+<div id="unshift1"></div>
+<div id="shift1"></div>
+<div id="shift1A"></div>
+<script>
+var shift1 = [' Jolly', ' happy', ' social', ' joyful'];
+shift1.unshift(' Sad');
+document.getElementById('unshift1').innerHTML = '<p>'+shift1+'</p>';
+var unshift1 = shift1.shift();
+document.getElementById('shift1').innerHTML = '<p>'+unshift1+'</p>';
+//document.getElementById('shift1A').innerHTML = '<p>'+shift1+'</p>'
+</script>
+
+<div id="unshift2"></div>
+<div id="shift2"></div>
+<div id="shift2A"></div>
+<script>
+var listOne = [' a',' b',' c',' z'];
+listOne.unshift(' y');
+document.getElementById('unshift2').innerHTML = '<p>'+listOne+'</p>';
+var unshiftOne = listOne.shift();
+document.getElementById('shift2').innerHTML = '<p>'+unshiftOne+'</p>';
+</script>
+
+<div id="unshift3"></div>
+<div id="shift3"></div>
+<div id="shift3A"></div>
+<script>
+var listTwo = [' Red',' Green', ' Blue'];
+var listTwoUnshift = listTwo.unshift('RGB = ');
+document.getElementById('unshift3').innerHTML = '<p>'+listTwo+'</p>';
+var listTwoShift = listTwo.shift();
+document.getElementById('shift3').innerHTML = '<p>'+listTwoShift+'</p>';
+document.getElementById('shift3A').innerHTML = '<p>'+listTwoUnshift+'</p>';
+</script>
+
+<br>
+<hr>
+<h3>Excercise #3 | Create an arrays and reverse it and show it in a div</h3>
+<div id="original-list"></div>
+<div id="reverse-list"></div>
+
+<script>
+var list = [' Aphex Twin', ' Ciel', ' R.Roo', ' Squarepusher'];
+document.getElementById('original-list').innerHTML = '<p>My original list of electronic music producers that I like is this (in alphabetical order): '+list+'</p>'
+var listReverse = list.reverse();
+document.getElementById('reverse-list').innerHTML = '<p>My updated list of electronic music producers looks like this (in reverse alphabetical order): '+listReverse+'</p>'
+</script>
+<br>
+<hr>
+<h2>These are examples</h2>
+<br>
+<hr>
+<h3>Push & pop methods of arrays</h3>
+<script> 
+var names=['Optimus', 'Buzz', 'Elmo']; 
+console.log('names before thepus: '+names); 
+
+names.push('Kermit');
+console.log('Names afer the push: '+names);
+
+names.pop();
+console.log('Names after the pop: '+names);
+</script>
+
+
+<br>
+<hr>
+<h3>Unshift & shift</h3>
+<script>
+var a = [' Optimus', ' Bingo', ' Kahn'];
+console.log('names before the push: '+a);
+
+a.unshift(' George');
+console.log('Names after the unshift: '+a);
+
+a.shift();
+console.log('Names after the shift: '+a);
+</script>
+
+
+<br>
+<hr>
+<h3>Useful feather of pop and shift</h3>
+<p>One useful feature of pop and shift is that their returned value tells you what they just removed from the array.</p>
+<p>Try the following example to see this in action:</p>
+<script>
+var deck = ['Ace', 'Queen', 'Joker'];
+console.log('deck of cards before the pop: '+ deck);
+var pickedCard = deck.pop();
+
+console.log('deck of cards after the pop: '+deck);
+console.log('picked card is: '+pickedCard);
+</script>
+</body>
+</html>

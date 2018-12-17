@@ -34,11 +34,19 @@ p {
 
 #mydiv3{
 	display: inline-block;
-	background: red;
 	padding: 30px;
 	transition: transform 0.2s;
 }
 #mydiv4{
+	transition: all 0.2s;
+}
+#magdiv{
+	font-family: sans-serif, arial, verdana;
+	background-color: darkolivegreen;
+	color:darkkhaki;
+	width: 100px;
+	height: 100px;
+	margin-bottom: 15px;
 	transition: all 0.2s;
 }
 .highlight{
@@ -54,9 +62,47 @@ transition: 0.2s;
 transition: 0.2s;
 transition: 0.2s;
 transition: 0.2s;
-
+<br><br>
+<hr>
 <!-- Excercise #2-->
 <h2>Excercise #2</h2>
+<div id="mydiv">Hey watch this text fade in or out via the buttons below.</div>
+<button id="fadeout1">Fade out</button>
+<button id="fadein1">Fade in</button>
 
+<script>
+var div1 = document.getElementById('mydiv');
+document.getElementById('fadeout1').onclick = function(){
+	div1.style.opacity = '0';};
+document.getElementById('fadein1').onclick = function(){
+	div1.style.opacity = '1';};
+</script>
+<br><br>
+<hr>
+<!-- Excercise #3-->
+<h2>Excercise #3</h2>
+<div id="mydiv3"> Click the button below to move this text.</div>
+<br><button id="btn3">Move text</button>
+<script>
+var moveText = document.getElementById('mydiv3');
+document.getElementById('btn3').onclick = function(){
+	moveText.style.transform = 'translateX(300px)';};
+</script>
+
+<br><br>
+<hr>
+<!-- Excercise #4-->
+<h2>Excercise #4 -- CHALLENGE!</h2>
+<div id="magdiv"></div>
+	<p>Check it out — Change the size of the box above by typing a number into the box below & clicking the button.</p>
+<input placeholder="# of pixels" id="pxls" type="text">
+<button class="sum-btn" id="btn4">Change size</button>
+<script>
+var magicInput = document.getElementById('magdiv');
+document.getElementById('btn4').onclick = function(){
+	var inputBox = document.getElementById('pxls').value;
+	magicInput.style.height = inputBox;
+	magicInput.style.width = inputBox;};
+</script>
 
 </html>

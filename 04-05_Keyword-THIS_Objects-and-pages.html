@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Objects: using "this" keyword to get better control of objects and pages</h1>
+<br>
+<hr>
+<!-- Exercise section -->
+
+<h2>Exercise section</h2>
+
+<!-- Exercise #1 
+•Create an object called shoe.
+
+• The object should have a property called size initially set to 5.
+
+• Create two methods: bigger and smaller that increase or decrease the size of the shoe by 1, respectively.
+
+• Remember to use the this keyword!
+
+• When you’re comfortable, repeat it once more without looking at an example. -->
+
+<h3>#1 | Create a object called 'shoe'…set the size and then create two methods: 'bigger' and 'smaller' that increase or decrease the size of the shoe by 1, respectively.</h3>
+<div id="shoe1"></div>
+<script>
+var shoe = { 
+	size: 5, 
+	
+	}
+</script>
+
+
+
+<br>
+<hr>
+<h2>Example sections</h2>
+<h3>#1 | Why use 'this'</h3>
+<script>
+var car = {
+	speed: 30,
+	drive: function(){
+		var speed = this.speed;
+		console.log("I'm driving at "+speed+" mph.");}
+};
+car.drive();
+</script>
+<h3>#2 | Drive faster function</h3>
+<script>
+var car = {
+	speed: 30,
+	drive: function(){
+		var speed = this.speed;
+		console.log("I'm driving at "+speed+" mph");},
+		driveFaster: function(){
+			this.speed +=10;
+			this.drive();
+		}
+};
+car.drive();
+car.driveFaster();
+</script>
+
+<h3>#3 | More useful stuff you can do with 'this'</h3>
+<div id="mytext">Click on this text</div>
+<script>
+document.getElementById('mytext').onclick = function(){
+	this.style.color = 'red';
+};
+</script>
+<hr>
+</body>
+</html>
