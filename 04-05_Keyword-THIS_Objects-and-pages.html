@@ -7,73 +7,48 @@
 </head>
 <body>
 
-<h1>This is practice</h1>
+<h1>Objects: using "this" keyword to get better control of objects and pages</h1>
+<br>
 <hr>
-<h2>Example #1</h2>
-<script> 
-var car = {speed: 30, drive: function(){
-	var speed = this.speed; 
-	console.log("I'm driving at "+speed+ " mph.");}};
-car.drive();
-</script>
+<h2>Exercise section</h2>
+<h3>#1 | Create a object called 'shoe'…set the size and then create two methods: 'bigger' and 'smaller' that increase or decrease the size of the shoe by 1, respectively.</h3>
+
+<br>
 <hr>
-<h2>Example #2 | driveFaster</h2>
+<h2>Example sections</h2>
+<h3>#1 | Why use 'this'</h3>
 <script>
 var car = {
-	speed:30,
+	speed: 30,
 	drive: function(){
-		var speed =  this.speed;
-		console.log("I'm driving at "+speed+" mph.");},
-		driveFaster(){
-			this.speed+=10;
-			this.drive(); 
+		var speed = this.speed;
+		console.log("I'm driving at "+speed+" mph.");}
+};
+car.drive();
+</script>
+<h3>#2 | Drive faster function</h3>
+<script>
+var car = {
+	speed: 30,
+	drive: function(){
+		var speed = this.speed;
+		console.log("I'm driving at "+speed+" mph");},
+		driveFaster: function(){
+			this.speed +=10;
+			this.drive();
 		}
-	};
-	car.drive();
-	car.driveFaster();
+};
+car.drive();
+car.driveFaster();
 </script>
 
-<hr>
-<h2>Example #3 | More useful stuff to do with "THIS"</h2>
+<h3>#3 | More useful stuff you can do with 'this'</h3>
 <div id="mytext">Click on this text</div>
-<script> 
+<script>
 document.getElementById('mytext').onclick = function(){
 	this.style.color = 'red';
-}; 
+};
 </script>
-<br/>
-<br/>
-<hr/>
-<div class="flex-container">
-<div>
-<h2>Excercises #1 | Shoe with size change via methods</h2>
-<p>Click on the buttons to make your shoe size get larger or smaller:</p>
-</div>
-<div id="shoe"></div>
-<div>
-<p><button id="smaller">Smaller</button> | <button id="bigger">Bigger</button></p>
-</div>
-</div>
-<script>
-	var shoe = {
-		size: 5, 
-		sizeDisplay: function(){document.getElementById('shoe').innerHTML = '<p>My shoe size is: '+this.size+'</p>';},
-	
-		// click on div and make the size get bigger
-		bigger: document.getElementById('bigger').onclick = function(){
-			if((this.size>=1) || (this.size<=13)){
-			this.size++;}
-			else{document.getElementById('shoe').style.color = 'red';}},
-	
-		// click on div and make the size get smaller
-		smaller: document.getElementById('smaller').onclick = function(){
-			if((this.size>=2) || (this.size<=13)){
-				this.size--;}
-			else{document.getElementById('shoe').style.color = 'red';}}};
-		shoe.sizeDisplay();
-		shoe.bigger();
-		shoe.smaller();	
-		console.log(shoe.size);
-	</script>
+<hr>
 </body>
 </html>

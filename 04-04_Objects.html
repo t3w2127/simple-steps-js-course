@@ -86,14 +86,42 @@ car.drive();
 <div id="car-method-3"></div>
 <script>
 var car = {
-	color: ' silver';
-	make: ' Honda';
-	style: ' CR-V';
+	color: ' silver',
+	make: ' Honda',
+	style: ' CR-V',
 	drive: function(){
 		document.getElementById('car-method-3').innerHTML = '<p>Dude! I\'m totally flying high right now at  80mph!</p>';}
 }
 document.getElementById('car4').innerHTML = '<p>My car is '+car.color+' and is a '+car.make+car.style+'.</p>';
 car.drive();
+</script>
+
+
+<br>
+<h3>#5 | Person object with favorite color and a method of greet — greet takes in parameter of 'name' and shows the greeting in a div</h3>
+<p><b>Version #1</b></p>
+<div id="greet"></div>
+<script>
+var person = {
+	favoriteColor: 'violet',
+	favoriteShow: 'Seinfeld',
+	favoriteMusic: 'Electronica',
+	greet: function(person2){
+		document.getElementById('greet').innerHTML = '<p>Hi there '+person2+'! I\'m so glad you asked what things I like. My favorite color is '+person.favoriteColor+', my favorite show is '+person.favoriteShow+', and my favorite music is '+person.favoriteMusic+'.</p>';}
+}
+person.greet('Josh');
+</script>
+
+<p><b>Version #2</b></p>
+<div id="greet2"></div>
+<script>
+	var person = {
+		color: 'purple',
+		favoriteShow: ' Transformers',
+		greet: function(other){
+			document.getElementById('greet2').innerHTML = '<p>Hi '+other+'! My favorite color is '+person.color+', and my favorite show is '+person.favoriteShow+'.</p>';}
+	}
+	person.greet('Jeff');
 </script>
 
 <br>
