@@ -25,13 +25,40 @@
 
 • When you’re comfortable, repeat it once more without looking at an example. -->
 
-<h3>#1 | Create a object called 'shoe'…set the size and then create two methods: 'bigger' and 'smaller' that increase or decrease the size of the shoe by 1, respectively.</h3>
+<h3>#1 | Shoe object</h3>
+<p>What's your shoe size?</p>
 <div id="shoe1"></div>
+<button id='bigger'>Bigger</button> | <button id='smaller'>Smaller</button>
+<br>
 <script>
+// Shoe object
 var shoe = { 
 	size: 5, 
+	sizeDisplay: function(){
+	var size = this.size;
+	document.getElementById('shoe1').innerHTML = '<p>My shoe size is: <b>'+size+'</b>.</p>';},
+
+	//Make the shoe size get bigger
+	getBigger: function(){
+		this.size ++;
+		shoe.sizeDisplay();},
 	
+	//Make the shoe size get smaller
+	getSmaller: function(){
+	this.size --;
+	shoe.sizeDisplay();
 	}
+};
+shoe.sizeDisplay();
+
+//Button controls
+document.getElementById('smaller').onclick = function(){
+	shoe.getSmaller();
+	};
+
+document.getElementById('bigger').onclick = function(){
+	shoe.getBigger();
+	};
 </script>
 
 
