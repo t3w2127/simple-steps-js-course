@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Regular Expressions: Match patterns in text, validate user input, and perform a more powerful find/replace</h1>
+<hr>
+<br>
+<!-- Exercise section -->
+<h2>Exercise section</h2>
+<h3>Exercise 01: Match</h3>
+<script>
+var str = "Hi, here's some text. Hi again. Also, hi.";
+var result = str.match(/hi/ig);
+console.log(result);
+</script>
+Type this line until you don't need to look at an example: "var result = str.match(/hi/ig);":
+
+var result = str.match(/hi/ig); 
+var result = str.match(/hi/ig);
+var result = str.match(/hi/ig);
+
+<p>Type it 5 more times</p>
+var result = str.match(/hi/ig);
+var result = str.match(/hi/ig);
+var result = str.match(/hi/ig);
+var result = str.match(/hi/ig);
+var result = str.match(/hi/ig);
+var result = str.match(/hi/ig);
+<br>
+<hr>
+<h3>Exercise 02: Replace</h3>
+<script>
+var str = "Hi, here'some text. Hi again. Also, hi.";
+var result = str.replace(/hi/gi, 'BYE');
+console.log(result);
+</script>
+
+var result = str.replace(/hi/ig, 'BYE');
+var result = str.replace(/hi/ig, 'BYE');
+<p>Type it 5 more times</p>
+var result = str.replace(/hi/ig, 'BYE');
+var result = str.replace(/hi/ig, 'BYE');
+var result = str.replace(/hi/ig, 'BYE');
+var result = str.replace(/hi/ig, 'BYE');
+var result = str.replace(/hi/ig, 'BYE');
+<br>
+<hr>
+<h3>Exercise 03: Replace with a function</h3>
+<script> 
+var str = "Hi, here'some text. Hi again. Also, hi.";
+var result = str.replace(/hi/ig, function(currentValue){
+	if(currentValue === 'Hi'){return 'Bye';}
+	else{return 'bye';}
+}); 
+console.log(result);
+</script>
+<br>
+<hr>
+<h3>Exercise 04: Autocorrect 'taht' with 'that'</h3>
+<script>
+var str = "Hi, taht was funny. Taht was a good show.";
+var result = str.replace(/taht/ig, function(currentValue){
+	if(currentValue === 'Taht'){return 'That';}
+	else{return 'that';}});
+console.log(result);
+</script>
+<br>
+<hr>
+<h3>Exercise 05: Basic email validation</h3>
+<p>email form</p>
+<input id="email" type="text">
+<button id="submit">Submit</button>
+<div id="valid-email"></div>
+<script>
+document.getElementById('submit').onclick = function(){
+	
+	// Capture email address
+	var email = document.getElementById('email').value;
+	
+	// Check the email is valid by making sure it has an '@' symbol
+	var emailValid = email.match(/@/, function(currentValue){
+
+	// If the 'currentValue' matches '@' in the field it will be considered valid	
+	if(currentValue==='@'){document.getElementById('valid-email').innerHTML = '<p>Thank you for submiting your email!</p>';}
+
+	// Else if no '@' is present, the text string will be considered invalid
+	else{document.getElementById('valid-email').innerHTML = '<p style="color:red;">Please enter a valid email address.</p>';}
+	})
+}
+	
+
+	/* var v = email.match(/@/, function(currentValue){
+		if(currentValue === '@'){document.getElementById('valid-email').innerHTML = '<p>Thank you for submiting your email!</p>';}
+		else{document.getElementById('valid-email').innerHTML = '<p style="color:red;">Please enter a valid email address.</p>';}
+	}) */
+</script>
+
+<br>
+<hr>
+<!-- Exercise section -->
+<h2>Example section</h2>
+<p><b>Example 01: Match — find all parts of a string that match a pattern</b></p>
+<ul>
+	<li>Create a regular expression that says what the pattern is.</li>
+	<li>Use match to find all matches of your pattern.</li>
+</ul>
+<script>
+var str = "Hi, here's some text. Hi again. Also, hi.";
+var pattern = /hi/ig;
+var result = str.match(pattern);
+console.log(result);
+</script>
+
+<script>
+	var str = "Hi, here's some text. Hi again. Also, hi.";
+	var result = str.match(/hi/ig);
+	console.log(result);
+</script>
+<br>
+<p><b>Example 01a: Match — get a yes/no answer if something a word or pattern is in a string</b></p>
+<script>
+var str = "Hi, here's some text. Hi again. Also, hi.";
+if(str.match(/hi/i)){console.log('We found it.');}
+	else{console.log('We did not find it.');}
+</script>
+
+<br>
+<p><b>Example 02: Replace—Find and replace all parts of a string that match a given pattern</b></p>
+<script>
+var str = "Hi, here's some text. Hi again. Also, hi.";
+var result = str.replace(/hi/gi, 'BYE');
+console.log(result);
+</script>
+<br>
+<p><b>Example 02a: Make replace more powerful with functions</b></p>
+<script>
+var str = "Hi, here's some text. Hi again. Also, hi.";
+var result = str.replace(/hi/ig, function(currentValue){
+	if(currentValue==='Hi'){return 'Bye';}
+	else{return 'bye';}
+});
+console.log(result);
+</script>
+
+
+
+
+<hr>
+</body>
+</html>

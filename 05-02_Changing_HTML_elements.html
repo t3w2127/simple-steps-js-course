@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Change HTML attributes dynamically</h1>
+<p>Always remember to use "className" to change a class via JS. </p>
+<br>
+<hr>
+<!-- Exercise section -->
+<h2>Exercise section</h2>
+<p><b>Exercise 01: Type the following lines of code twice</b></p>
+<p>01</p>
+document.getElementById('mylink').href = 'new.html';
+document.getElementById('mylink').style = 'color:red; background:black;';
+<p>02</p>
+document.getElementById('mylink').href = 'new.html';
+
+document.getElementById('mylink').style = 'color:red; background:black;';
+
+<hr>
+<br>
+<p><b>Exercise 02: Change the destination of a button's link</b></p>
+<p><a id="link1" target="_blank" href="https://tickets.com">Buy your tickets here!</a></p>
+<button id="upgrade-link">Upgrade</button>
+<script>
+document.getElementById('upgrade-link').onclick = function(){
+	document.getElementById('link1').href = 'https://tickets.com/fancy-tickts';
+}
+</script>
+
+
+<hr>
+<br>
+<h2>Example section</h2>
+<h3>Example: Change an attribute</h3>
+<p>Changing a link's destination. Example <a id="mylink" href="old.html">My link</a></p>
+<script>
+document.getElementById('mylink').href='new.html';
+document.getElementById('mylink').style = 'color:red; background:black';
+</script>
+
+<hr>
+</body>
+</html>
