@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!--
+	<h3>Exercise 05 v1: Basic email validation</h3>
+	<p>email form</p>
+	<div id="form">
+	<input id="email" type="text">
+	<button id="submit">Submit</button>
+	</div> 
+	
+	<div id="valid-email"></div>
+	
+	<script>
+	document.getElementById('submit').onclick = function(){
+		var email = document.getElementById('email').value;
+	
+	  // Check the email is valid by making sure it has an '@' symbol
+	 var emailValid = email.match(/@/, function(v1){
+		if(email ==='@'){
+		document.getElementById('valid-email').innerHTML = '<p>Thank you for submiting your email!</p>';}
+	
+		// Else if no '@' is present, the text string will be considered invalid
+		else{document.getElementById('valid-email').innerHTML = '<p style="color:red;">Please enter a valid email address.</p>';}
+		})
+	</script>
+	<br> 
+	<br> 
+	<hr> 
+	<br> 
+-->
+	<h3>Exercise 05 v2: Basic email validation</h3>
+	<p>email form</p>
+	<div id="form2">
+		<input id="email2" type="text">
+		<input id="submit2" type="Submit" value="Submit">
+	</div> 
+	
+	<div id="valid-email2"></div>
+	
+	<script> 
+	emailSubmit = document.getElementById('email2').value;
+	console.log(emailSubmit);
+
+	document.getElementById('submit2').onclick = function(){
+		// Check the email is valid by making sure it has an '@' symbol
+		var result=emailSubmit.match(/@/);
+		
+		//console.log(result);
+		if(result == '@'){
+		document.getElementById('form2').style.display = 'none';
+		document.getElementById('valid-email2').innerHTML = '<p>Thank you for submiting your email!</p>';}
+
+		// Else if no '@' is present, the text string will be considered invalid
+		else{document.getElementById('valid-email2').innerHTML = '<p style="color:red;">Please enter a valid email address.</p>';}
+	}
+	</script>
+	<br>
+	<br>
+</body>
+</html>

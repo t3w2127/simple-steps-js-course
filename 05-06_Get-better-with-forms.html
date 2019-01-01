@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Get better with forms</h1>
+<br>
+<hr>
+<!-- Exercise section -->
+<h2>Exercise section</h2>
+<h3>Exercise 01: Make a basic checkbox</h3>
+<br>
+<p><b>Version 01</b></p>
+<label>
+	<input type="checkbox" id="mycheckbox">
+	Check this 01
+</label>
+<script> 
+document.getElementById('mycheckbox').onclick = function(){
+	if(this.checked){console.log('Checked 01');}
+	else{console.log('Unchecked 01');}
+};
+</script>
+<p><b>Version 02</b></p>
+<label>
+	<input type="checkbox" id="mycheckbox2">
+	Check this 02
+</label>
+<script>
+document.getElementById('mycheckbox2').onclick = function(){
+	if(this.checked){console.log('Checked 02');}
+	else{console.log('Unchecked 02');}};
+</script>
+<br>
+<p><b>Version 03</b></p>
+<label>
+	<input type="checkbox" id="mycheckbox03">
+	Check this 03
+</label>
+<script>
+document.getElementById('mycheckbox03').onclick = function(){
+	if(this.checked){console.log('Checked 03');}
+	else{console.log('Unchecked 03');}};
+</script>
+<br>
+<p><b>Version 04</b></p>
+<label>
+	<input type="checkbox" id="mycheckbox04">
+	Check this 04
+</label>
+<script>
+document.getElementById('mycheckbox04').onclick = function(){
+	if(this.checked){console.log('Checked 04');}
+	else{console.log('Unchecked 04');}};
+</script>
+<br>
+<p><b>Version 05</b></p>
+<label>
+	<input type="checkbox" id="mycheckbox05">
+	Check this 05
+</label>
+<script>
+document.getElementById('mycheckbox05').onclick = function(){
+	if(this.checked){console.log('Checked 05');}
+	else{console.log('Unchecked 05');}};
+</script>
+<br>
+<hr>
+<h3>Exercise 02: Make a basic checkbox</h3>
+
+<br>
+<hr>
+<h3>Exercise 03: Make a basic checkbox</h3>
+
+<hr>
+<br>
+
+
+<!-- Example section -->
+<h2>Example section</h2>
+<h3>Example 01: Working with a check box</h3>
+<label>
+	<input type="checkbox" id="mycheckbox">
+	<p>Check this, yo</p>
+</label>
+<script>
+document.getElementById('mycheckbox').onclick = function(){
+	if(this.checked){console.log('checked');}
+	else{console.log('unchecked');}
+};
+</script>
+<br>
+<hr>
+<h3>Example 02: Get the value of a checkbox</h3>
+<div>
+	<p>Total pizza price: $<span id="price"></span></p>
+</div>
+<form autocomplete="off">
+	<label>
+		<p>Garlic</p>
+		<input type="checkbox" id="garlic" value="1">
+	</label>
+	<label>
+		<p>Peppers</p>
+		<input type="checkbox" id="peppers" value="3">
+	</label>
+</form>
+<script>
+var price = 10;
+var priceSpan = document.getElementById('price');
+priceSpan.innerHTML = price;
+
+function handleCheckbox(){
+	var toppingPrice = Number(this.value);
+	if(this.checked){price+=toppingPrice;}
+	else{price-=toppingPrice;}
+
+	priceSpan.innerHTML = price;
+}
+document.getElementById('garlic').onclick = handleCheckbox;
+document.getElementById('peppers').onclick = handleCheckbox;
+</script>
+<br>
+<hr>
+<h3>Example 03: Radio buttons</h3>
+<label>
+	<input id="radioa" type="radio" name="q1" value="radio a">
+	<p>Answer A</p>
+</label>
+<label>
+	<input id="radiob" type="radio" name="q1" value="radio b">
+	<p>Answer B</p>
+</label>
+<script>
+document.getElementById('radioa').onclick = function(){console.log(this.value);};
+document.getElementById('radiob').onclick = function(){console.log(this.value);}; 
+</script>
+<h4>Tip — to get all check boxes and radio buttons use 'querySelectorAll'</h4>
+<p>Remember how querySelectorAll lets you get all elements that match a CSS selector?</p>
+
+<p>You can use the :checked pseudo-class selector from CSS to get all inputs that are checked.</p>
+
+<p>or example, this code would give you all inputs that are checked:</p>
+
+<p>var checked = document.querySelectorAll('input:checked');</p>
+
+<p>This code would give you all checked radio buttons inside an element with the id “myquiz”:</p>
+
+<p>var checked = document.querySelectorAll('#myquiz input[type=radio]:checked');</p>
+
+<p>If you’d like more info about the :checked selector in CSS, feel free to read about it.</p>
+<br>
+<hr>
+<h3>Example 04: Dealing with SELECT dropdowns</h3>
+<select id="myselect">
+	<option>Option 1</option>
+	<option>Option 2</option>
+	<option value ="custom value">Option 3</option>
+</select>
+<script> 
+document.getElementById('myselect').onchange = function(){console.log(this.value);};
+</script>
+<hr>
+</body>
+</html>
