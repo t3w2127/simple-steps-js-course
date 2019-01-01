@@ -25,7 +25,125 @@
 
 • When you’re comfortable, repeat it once more without looking at an example. -->
 
+
+<h3>#2 | Change background color of a div with a click</h3>
+<p><b>Version 02 | Light blue background</b></p>
+	<div id="color1"><p>Click me to see me change color</p></div>
+	<script>
+		document.getElementById('color1').onclick = function(){this.style.backgroundColor = '#B6E3F2';}
+	</script>	
+
+<br>
+<hr>
+<p><b>Version 01 | Green background</b></p>
+	<div id="color"><p>Click me to see me change color</p></div>
+	<script>
+	document.getElementById('color').onclick = function(){
+		this.style.backgroundColor = 'green';
+	}
+	</script>
+
+	<br>
+	<hr>
+<h3>#1 | Objects using methods</h3>
+
+<p><b>Version 04 | Miles from Boston</b></p>
+<p>What's your estimated distance from Boston?</p>
+<div id="boston"></div>
+<button id="more">More miles</button> | <button id="less">Fewer miles</button>
+<script>
+var distance = {
+	miles: 10,
+	displayMiles: function(){
+		var displayMiles = this.miles;
+		document.getElementById('boston').innerHTML = '<p>I estimate my distance from Boston to be about <b>'+this.miles+' miles</b>.</p>';
+	},
+	moreMiles: function(){
+	this.miles ++;
+	distance.displayMiles();},
+
+	lessMiles: function(){
+		this.miles --;
+		distance.displayMiles();}
+	};
+	document.getElementById('more').onclick = function(){
+		distance.moreMiles();
+	};
+	document.getElementById('less').onclick = function(){
+		distance.lessMiles();
+	};
+distance.displayMiles();
+</script>
+
+<br>
+<br>
+<hr>
+<p><b>Version 03 | Pants waist object</b></p>
+<p>What's your pant waist size?</p>
+<div id="waist"></div>
+<button id="bigger-waist">Larger waist</button> | <button id="smaller-waist">Smaller waist</button>
+<script>
+	var waistSize = {
+		sizeW: 30,
+		sizeWDisplay: function(){
+			sizeW = this.sizeW;
+			document.getElementById('waist').innerHTML = '<p>When I wear jeans my waist is a size <b>'+this.sizeW+'</b>.</p>';
+		}, 
+		biggerW: function(){
+			this.sizeW ++;
+			waistSize.sizeWDisplay();
+		},
+		smallerW: function(){
+			this.sizeW --;
+			waistSize.sizeWDisplay();
+		}};
+	waistSize.sizeWDisplay();	
+
+	document.getElementById('bigger-waist').onclick = function(){
+		waistSize.biggerW();};
+
+	document.getElementById('smaller-waist').onclick = function(){
+		waistSize.smallerW();};		 
+</script>
+<br>
+<br>
+<hr>
+
+
+<p><b>Version 02</b></p>
+<p>What's your shoe size?</p>
+<div id="shoe2"></div>
+<button id="bigger2">Bigger</button> | <button id="smaller2">Smaller</button>
+<br>
+<script>
+var shoe1 = {
+	size: 5, 
+	sizeDisplay: function(){
+		var size = this.size;
+		console.log("My shoe size is "+this.size);
+		document.getElementById('shoe2').innerHTML = '<p>My shoe size is: <b>'+this.size+'</b>';},
+	shoeBigger: function(){
+		this.size ++;
+		shoe1.sizeDisplay();},
+	shoeSmaller: function(){
+		this.size --;
+		shoe1.sizeDisplay();}};
+shoe1.sizeDisplay();
+
+document.getElementById('bigger2').onclick = function(){
+	shoe1.shoeBigger();
+	};
+document.getElementById('smaller2').onclick = function(){
+	shoe1.shoeSmaller();
+	};
+
+</script>
+<hr>
+<br>
+<p><b>Version 01</b></p>
+=======
 <h3>#1 | Shoe object</h3>
+
 <p>What's your shoe size?</p>
 <div id="shoe1"></div>
 <button id='bigger'>Bigger</button> | <button id='smaller'>Smaller</button>

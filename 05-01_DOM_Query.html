@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>DOM Traversal: Get elements by more than just their ids</h1>
+<br>
+<hr>
+<!-- Exercise section -->
+<h2>Exercise section</h2>
+
+<p><b>Exercise 01</b></p>
+document.querySelector('.myclass')
+document.querySelector('.myclass')
+document.querySelector('.myclass')
+document.querySelector('.myclass')
+document.querySelector('.myclass')
+document.querySelector('.myclass')
+
+<p><b>Exercise 02</b></p>
+<div class='myclass'><p><b>Div 01</b></p></div>
+<div class='myclass'><p><b>Div 02</b></p></div>
+<div class='myclass'><p><b>Div 03</b></p></div>
+<script>
+document.querySelectorAll('.myclass')[0].style.color = '#C25759';
+</script>
+<br>
+<p><b>Exercise 03</b></p>
+document.querySelectorAll('.myclass')
+document.querySelectorAll('.myclass')
+document.querySelectoryAl('.myclass')
+document.querySelectorAll('.myclass')
+document.querySelectorAll('.myclass')
+document.querySelectorAll('.myclass')
+document.querySelectorAll('.myclass')
+document.querySelectorAll('.myclass')
+document.querySelectorAll('.myclass')
+document.querySelectorAll('.myclass')
+<br>
+<p><b>Exercise 04 | Create three divs with the class “myclass”. Use querySelectorAll to change the text color of the second div in the list.</b></p>
+<div class='myclass'><p><b>Div 01</b></p></div>
+<div class='myclass'><p><b>Div 02</b></p></div>
+<div class='myclass'><p><b>Div 03</b></p></div>
+<script>
+document.querySelectorAll('.myclass')[1].style.color = '#57C2C0';
+document.querySelectorAll('.myclass')[4].style.color = '#57C2C0';
+</script>
+<br>
+<p><b>Exercise 05 | Create three divs with the class “myclass2”. Use querySelectorAll and a loop to change the text color of the all of the divs in the list.</b></p>
+<div class="myclass2"><p><b>Div 01</b></p></div>
+<div class="myclass2"><p><b>Div 02</b></p></div>
+<div class="myclass2"><p><b>Div 03</b></p></div>
+<div class="myclass2"><p><b>Div 04</b></p></div>
+<div class="myclass2"><p><b>Div 05</b></p></div>
+<div class="myclass2"><p><b>Div 06</b></p></div>
+
+<script>
+var d = document.querySelectorAll('.myclass2');
+for(var b=0; b<d.length; b++){
+	d[b].style.color = '#57C2C0'
+}
+</script>
+<br>
+<p><b>Exercise 06</b></p>
+<ul><li>Create three divs with the class “myclass”.</li>
+	<li>Create two buttons, one that says Show All and one that says Hide All.</li>
+	<li>Create two buttons, one that says Show All and one that says Hide All.</li>
+	<li>One of those buttons should show all of the divs with the class “myclass”. The other button should hide them.</li>
+</ul>
+<div class="myclass3"><p><b>Div 01</b></p></div>
+<div class="myclass3"><p><b>Div 02</b></p></div>
+<div class="myclass3"><p><b>Div 03</b></p></div>
+<button id="hide">Hide all</button>  | <button id="show">Show all</button>
+<script> 
+var  classOne= document.querySelectorAll('.myclass3');
+
+//Hide all
+document.getElementById('hide').onclick = function(){
+	for(var h=0; h<classOne.length; h++){classOne[h].style.display = 'none';}};
+
+//Show all
+document.getElementById('show').onclick = function(){
+	for(var s=0; s<classOne.length; s++){classOne[s].style.display = 'block';}}; 
+</script>
+<br>
+<br>
+<hr>
+<h2>Example sections</h2>
+<h3>01 | querySelector</h3>
+<div class="whatever1"><p>Div 01</p></div>
+<div class="whatever2"><p>Div 02</p></div>
+<script>
+document.querySelector('.whatever1').style.color = 'gray';
+</script>
+<br>
+<h3>02 | Other examples of selectors</h3>
+<div class="ww">
+	<p>Text example</p>
+	<p><span>Link 0</span></p>
+	<p><span>Link 1</span></p>
+</div>
+<script>document.querySelector('.ww span').style.color = '#F2C5B6';</script>
+<br>
+<h3>03 | querySelectorAll</h3>
+<div class="ww2"><p>Div 00</p></div>
+<div class="ww2"><p>Div 01</p></div>
+<script>
+document.querySelectorAll('.ww2')[0].style.color ='#44C9C9';
+document.querySelectorAll('.ww2')[1].style.color ='#9F72CC';
+</script>
+<br>
+<h3>04 | Looping with querySelectorAll</h3>
+<div class="ww3"><p>Div 00</p></div>
+<div class="ww3"><p>Div 01</p></div>
+<div class="ww3"><p>Div 02</p></div>
+<div class="ww3"><p>Div 03</p></div>
+
+<script>
+var myDivs = document.querySelectorAll('.ww3');
+
+for(var i=0; i<myDivs.length; i++){
+	myDivs[i].style.color = '#82A360'
+}
+</script>
+<br>
+<h3>05 | Making your DOM traversal as fast as possible/h3>
+
+
+<hr>
+</body>
+</html>

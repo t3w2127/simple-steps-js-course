@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>String methods: Get better control of your text</h1>
+<p>Always remember to use "className" to change a class via JS. </p>
+<br>
+<hr>
+<!-- Exercise section -->
+<h2>Exercise section</h2>
+<p><b><span id="string1">Exercise 01: Use the slice method ot get the first 4 characters of a string…then change your code to get the last two characters</span></b></p>
+<div id="results"></div>
+<script>
+var strOne = "Exercise 01: Use the slice method ot get the first 4 characters of a string…then change your code to get the last two characters"; 
+var results1 = strOne.slice(-4);
+var results2 = strOne.slice(-2);
+var results3 = strOne.slice(9, -9);
+document.getElementById('results').innerHTML = '<p>The last 4 characters from the "Exercise 01:…" string is: '+results1+'.</p><p>The last 2 characters from the "Exercise 01:…" string is: '+results2+'.</p> <p>The middle characters (75 characters from each end) in the "Exercise 01:…" string is: '+results3+'.</p>';
+</script>
+<br>
+<hr>
+<p><b>Exercise 02: Replace method</b></p>
+<p>This is example text, using "replace"</p>
+<div id="show1"></div>
+<div id="show2"></div>
+<script>
+var string1 = "<p>Original: Jumping frogs jump into the pond.</p>";
+document.getElementById('show1').innerHTML = string1;
+var string2 = string1.replace('Original', 'New', 'pond', 'river');
+var string3 = string2.replace('pond', 'river');
+document.getElementById('show2').innerHTML = string3;
+</script>
+
+<br>
+<hr>
+<p><b>Exercise 03: Replace method via a button w/ onclick function</b></p>
+<div id="string3"></div>
+<button id="string-update">Click me</button>
+<script> 
+var u = '<p>Happy is the man who can laugh at himself for he shall never cease to be amused.</p>';
+document.getElementById('string3').innerHTML = u;
+document.getElementById('string-update').onclick = function(){
+	var n = u.replace('man', '<b>person</b>');
+	document.getElementById('string3').innerHTML = n;
+}
+</script>
+
+<hr>
+<br>
+<!-- Example section -->
+<h2>Example section</h2>
+<h3>Example 01: String slice / slice method</h3>
+<script>
+var str = "Here is some text.";
+var result = str.slice(1,7);
+console.log(result);
+</script>
+
+<script>
+	var str = "Here is some text.";
+	//last 5 characters
+	var result = str.slice(-5);
+	console.log(result);
+</script>
+
+<script>
+	var str = "xxHere is some text.xx";
+	var result = str.slice(2,-2);
+	console.log(result);
+</script>
+<h3>Example 02: String replace: Replace parts of your text</h3>
+<script>
+var str = "Here is some text.";
+var result = str.replace('some', 'more');
+console.log(result);
+</script>
+
+<hr>
+</body>
+</html>

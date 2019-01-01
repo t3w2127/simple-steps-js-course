@@ -165,7 +165,7 @@
                                           <td>
                                             <div data-fusion-class="Subheadline" style="border:0px;margin:0px;background-color:transparent;display:block;color:rgb(74,71,71);font-family:sans-serif;font-size:16px;text-align:center;">
                                               <h1 style="text-align:center;color:rgb(92,182,175);font-size:32px;font-family:sans-serif;margin-top:0px;margin-bottom:0px;">
-                                                <span id="dl-title" style="color:rgb(92, 182, 175);font-size:28px;">Love never pauses</span>
+                                                <span id="dl-data" style="color:rgb(92, 182, 175);font-size:28px;">Love never pauses</span>
                                               </h1>
                                             </div>
                                           </td>
@@ -178,7 +178,7 @@
                                           <td>
                                             <div id="dl-byline" data-fusion-class="Content" style="border:0px;margin:0px 0px 20px;background-color:transparent;display:block;color:rgb(74,71,71);font-family:sans-serif;font-size:16px;text-align:center;">
                                               <p style="text-align:center;margin-top:0px;margin-bottom:0px;">
-                                                <strong style="font-family:sans-serif;font-size:18px;">By Susan Ward Jostyn, CS</strong>
+                                                <span id="dl-data"><strong style="font-family:sans-serif;font-size:18px;">By Susan Ward Jostyn, CS</strong></span>
                                               </p>
                                             </div>
                                           </td>
@@ -240,7 +240,7 @@
                                           <td>
                                             <div data-fusion-class="" style="margin:0px;">
                                               <div style="box-sizing:content-box;text-align:center;">
-                                                <div id="facebook-share"><a href="https://www.facebook.com/" style="text-decoration:none;cursor:pointer;box-sizing:content-box;"><img src="https://ui.icontact.com/assets/editor-social-icons/color/facebook.png" alt="Facebook" height="40" width="40" style="height:40px;width:40px;cursor:pointer;box-sizing:content-box;border:0px;" title="Facebook"></a>/div>
+                                                <div id="facebook-share"><a href="https://www.facebook.com/" style="text-decoration:none;cursor:pointer;box-sizing:content-box;"><img src="https://ui.icontact.com/assets/editor-social-icons/color/facebook.png" alt="Facebook" height="40" width="40" style="height:40px;width:40px;cursor:pointer;box-sizing:content-box;border:0px;" title="Facebook"></a>
                                                     <div id="twitter-share"><a href="https://twitter.com/" style="text-decoration:none;cursor:pointer;box-sizing:content-box;"><img src="https://ui.icontact.com/assets/editor-social-icons/color/twitter.png" alt="Twitter" height="40" width="40" style="height:40px;width:40px;cursor:pointer;box-sizing:content-box;border:0px;" title="Twitter"></a></div>
                                                     <div id="email-share"><a href="mailto:user@example.com?subject=A%20Daily%20Lift%20podcast%20you%20may%20enjoy&amp;body=I%20enjoyed%20this%20Daily%20Lift%20%E2%80%94%C2%A0I%20hope%20you%20will%2C%20too!%20" style="text-decoration:none;cursor:pointer;box-sizing:content-box;"><img src="https://ui.icontact.com/assets/editor-social-icons/color/email.png" alt="Email Address" height="40" width="40" style="height:40px;width:40px;cursor:pointer;box-sizing:content-box;border:0px;" title="Email Address"></a></div>
                                               </div>
@@ -398,12 +398,22 @@
       </tbody>
     </table>
     <script>
-    var dltitle = getElementById('dl-title').value;
-    var dlByline = getElementById('dl-byline').value;
-    document.getElementById('twitter-share').onclick = function(){
-        if
-
-    }
+    var dlData = getElementById('dl-data').value;
+    document.getElementById('twitter-share').onclick = function(){var e, n, r, i, o;
+  if (!(t = t || w.event, x.interaction(t, {}, !1), A.trigger("click", "tweet"), A.trigger("tweet", "tweet"), t.altKey || t.shiftKey || t.metaKey || b.ios() || b.android())) return e = l, s.id, n = w.screen.height, r = w.screen.width, i = Math.round(r / 2 - 275), o = 0, n > 420 && (o = Math.round(n / 2 - 210)), w.open(e, null, "scrollbars=yes,resizable=yes,toolbar=no,location=yes,width=550,height=420,left=" + i + ",top=" + o),
+    function(t) {
+      return (t = t || w.event) && t.preventDefault ? t.preventDefault() : t.returnValue = !1, t && t.stopPropagation ? t.stopPropagation() : t.cancelBubble = !0, !1
+    }(t)}}
     </script>
   </body>
 </html>
+
+<!--
+  <script>var e, n, r, i, o;
+  if (!(t = t || w.event, x.interaction(t, {}, !1), A.trigger("click", "tweet"), A.trigger("tweet", "tweet"), t.altKey || t.shiftKey || t.metaKey || b.ios() || b.android())) return e = l, s.id, n = w.screen.height, r = w.screen.width, i = Math.round(r / 2 - 275), o = 0, n > 420 && (o = Math.round(n / 2 - 210)), w.open(e, null, "scrollbars=yes,resizable=yes,toolbar=no,location=yes,width=550,height=420,left=" + i + ",top=" + o),
+    function(t) {
+      return (t = t || w.event) && t.preventDefault ? t.preventDefault() : t.returnValue = !1, t && t.stopPropagation ? t.stopPropagation() : t.cancelBubble = !0, !1
+    }(t)
+}
+</script>
+-->
