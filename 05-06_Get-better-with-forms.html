@@ -69,17 +69,139 @@ document.getElementById('mycheckbox05').onclick = function(){
 	else{console.log('Unchecked 05');}};
 </script>
 <br>
-<hr>
-<h3>Exercise 02: Make a basic checkbox</h3>
+<p><b>Version 06</b></p>
+<label>
+	<input type="checkbox" id="mycheckbox06">
+	Check this 06
+</label>
+<script>
+document.getElementById('mycheckbox06').onclick = function(){
+	if(this.checked){console.log('Checked 06');}
+	else{console.log('Unchecked 06');}};
+</script>
+<br>
+<p><b>Version 07</b></p>
+<label>
+	<input type="checkbox" id="mycheckbox07">
+	Check this 07
+</label>
+<script> 
+document.getElementById('mycheckbox07').onclick = function(){
+	if(this.checked){console.log('Checked 07');}
+	else{console.log('Unchecked 07');}};
+</script>
 
 <br>
 <hr>
-<h3>Exercise 03: Make a basic checkbox</h3>
+<h3>Exercise 02: Premium option checkbox</h3>
+<p>Nike Fluffy Clouds: $<span id="fc"></span> </p>
+<form autocomplete="off"></form>
+	<label>
+		<p><input type="checkbox" id="laces" value="50">
+			Add dope laces for $50</p>
+	</label>
+</form>
 
-<hr>
+<script>
+var shoePrice = 150;
+var priceSpan = document.getElementById('fc');
+priceSpan.innerHTML = shoePrice; 
+
+function handleCheckbox(){
+	var laces = Number(this.value);
+	console.log(laces);
+	if(this.checked){shoePrice+=laces;}
+	else{shoePrice-=laces;}
+
+	priceSpan.innerHTML = shoePrice;
+	console.log(shoePrice);
+}
+document.getElementById('laces').onclick = handleCheckbox;
+
+</script>
 <br>
+<hr>
+<h3>Exercise 03: Basic radio buttons</h3>
+<label> 
+	<p><input id="radioa" type="radio" name="q1" value="radio a">
+		Answer A</p>
+</label>
+<label>
+	<p><input id="radiob" type="radio" name="q1" value="radio b"> Answer B</p>
+</label>
+<script> 
+document.getElementById('radioa').onclick = function(){console.log(this.value);};
+document.getElementById('radiob').onclick = function(){console.log(this.value);};
+</script>
 
+<br>
+<hr>
+<h3>Exercise 04: Choose a car's color with radio buttons</h3>
+<p>The color of your new Tesla Model 3: <span id="color"></span></p>
+<label>
+	<p><input id="color1" type="radio" name="q2" value="Laser Blue">Laser Blue</p>
+</label>
+<label>
+	<p><input id="color2" type="radio" name="q2" value="Fire Red">Fire Red</p>
+</label>
+<label>
+	<p><input id="color3" type="radio" name="q2" value="Racing Green">Racing Green</p>
+</label> 
 
+<script> 
+var choice = 'Choose one below.'
+var colorChoice = document.getElementById('color');
+colorChoice.innerHTML = choice;
+
+document.getElementById('color1').onclick = function(){
+	var newColor = this.value; choice = newColor; colorChoice.innerHTML = choice; }
+  
+document.getElementById('color2').onclick = function(){
+	var newColor = this.value; choice = newColor; colorChoice.innerHTML = choice; }	
+
+document.getElementById('color3').onclick = function(){
+	var newColor = this.value; choice = newColor; colorChoice.innerHTML = choice; } 
+</script>
+
+<br>
+<hr>
+<h3>Exercise 05: A basic select dropdown</h3>
+<select id="myselect">
+	<option>Option 1</option>
+	<option>Option 2</option>
+	<option value="custom value">Option 3</option>
+</select>
+<script>
+document.getElementById('myselect').onchange = function(){
+	console.log(this.value);
+};
+</script>
+
+<br>
+<hr>
+<h3>Exercise 06: A practical select dropdown</h3>
+<div id="shoe-color"><p>Your shoe color is <span id="colorspan"></span></p></div>
+<p><select id="sc-select">
+	<option>Choose a color</option>
+	<option>Firefox Red</option>
+	<option>Blade Runner Blue</option>
+	<option>Greener than Green</option>
+	<option>Old Yeller Yellow</option>
+</select></p>
+<script> 
+var sc = 'Choose your shoe color below!';
+var colorChoice = document.getElementById('colorspan');
+colorChoice.innerHTML = sc;
+
+document.getElementById('sc-select').onchange = function(){
+var newColor = this.value;
+sc = newColor; 
+colorChoice.innerHTML = sc;
+};
+</script>
+
+<br>
+<hr>
 <!-- Example section -->
 <h2>Example section</h2>
 <h3>Example 01: Working with a check box</h3>
