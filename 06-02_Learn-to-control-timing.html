@@ -47,13 +47,12 @@ setTimeout(function(){
 
 <hr>
 <h3>Exercise 04: Change div's background color every 2 seconds</h3>
-<div id="color-change"><p>Check out how my background changes every 2 seonds</p></div>
+<div id="color-change" style="background-color: #ffffff;"><p>Check out how my background changes every 2 seconds</p></div>
 <script>
-	var bkgColor = ['#adccff', '#edadff', '#b8e0a1', '#e0aba1'];
-setInterval(function(){
-	bkgColor = i;
-	for(var i=0, i<4, i++);
-	document.getElementById('color-change').style.backgroundColor = bkgColor[i]}, 2000);
+	setInterval(function(){
+		var bkgColor = ['#adccff', '#edadff', '#b8e0a1', '#e0aba1'];
+		for(var i=0; i < bkgColor.length; i++);
+		document.getElementById('color-change').style.backgroundColor = bkgColor[i];}, 2000);
 </script>
 <hr>
 <h3>Exercise 05: Pick a random image</h3>
