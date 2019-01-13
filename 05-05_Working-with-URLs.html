@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Working with URLs</h1>
+<br>
+<hr>
+<!-- Exercise section -->
+<h2>Exercise section</h2>
+<p><b>Exercise 01: Type the following code 3 times looking at an example and 5 times without looking at an example: "window.location.href"</b></p>
+<script>
+window.location.href
+window.location.href
+window.location.href
+window.location.href
+window.location.href
+window.location.href
+window.location.href
+window.location.href
+window.location.href
+</script>
+
+<br>
+<hr>
+<p><b>Exercise 02: Detect if URL of this page has "html" in the div and show "This is an HTML file" in a div</b></p>
+
+<div id="url-text"></div>
+<button id="click-me">Learn about this page</button>
+<script>
+var urlText = window.location.href; 
+console.log('The URL of this page is: '+urlText);
+var urlResult = urlText.match(/.html/);
+
+document.getElementById('click-me').onclick = function(){
+	if(urlText.match(/.html/)){document.getElementById('url-text').innerHTML = '<p>The URL of this page is: <b>'+urlText+'</b></p><p>This is an HTML file.</p>';}
+	else{document.getElementById('url-text').innerHTML = '<p>The URL of this page is:</p><p>'+urlText+'</p><p>This <i>may not be</i> an HTML file.';}}
+</script>
+
+<br>
+<hr>
+<p><b>Exercise 03: Button and a field that leads to Google Business</b></p>
+<p>Are you a business or an individual (type individual or business in the field below)</p>
+	<input type="text" id="customer">
+	<button id="customer-button">Go</button>
+<script>
+var c = document.getElementById('customer').value;
+console.log('User inputted the word '+c);
+document.getElementById('customer-button').onclick = function(){
+	if(c.match(/business/i)){window.location.href = 'https://www.google.com/business/';}
+	else{window.location.href = 'https://www.google.com/account';}
+	}
+</script>
+<hr>
+<br>
+<!-- Example section -->
+<h2>Example section</h2>
+<h3>Example 01: Get a URL</h3>
+<script>
+var url = window.location.href;
+console.log(url);
+</script>
+
+<h3>Example 02: Set a URL</h3>
+<script>
+//window.location.href='https://www.google.com/';
+</script>
+<h3>Example 03: Get the pathname</h3>
+<script>
+var path = window.location.pathname;
+console.log(path);
+</script>
+<hr>
+</body>
+</html>
