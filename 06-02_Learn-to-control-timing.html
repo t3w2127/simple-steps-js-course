@@ -44,23 +44,26 @@ setTimeout(function(){
 	document.getElementById('show-me').style.display = 'block';
 }, 5000);
 </script> 
-
 <hr>
 <h3>Exercise 04: Change div's background color every 2 seconds</h3>
-<div id="color-change" style="background-color: #ffffff;"><p>Check out how my background changes every 2 seconds</p></div>
+<div id="color-change" style="background-color: #FFFFFF"><p>Check out how my background changes every 2 seconds</p></div>
 <script>
-	setInterval(function(){
-		var bkgColor = ['#adccff', '#edadff', '#b8e0a1', '#e0aba1'];
-		for(var i=0; i < bkgColor.length; i++);
-		document.getElementById('color-change').style.backgroundColor = bkgColor[i];}, 2000);
+	var count = 0; 
+	var bkgColor = ['#adccff', '#edadff', '#b8e0a1', '#e0aba1'];
+	var colorChange = setInterval(function(){
+		document.getElementById('color-change').style.backgroundColor = bkgColor[count];
+		while(count>4){count++;};
+		console.log(bkgColor[count]);
+		if(count===4){clearInterval(colorChange);}
+		}, 2000); 
 </script>
 <hr>
-<h3>Exercise 05: Pick a random image</h3>
+<h3>Exercise 05: TBD</h3>
 
 
 
 <hr>
-<h3>Exercise 06: A practical select dropdown</h3>
+<h3>Exercise 06: TBD </h3>
 
 
 <hr>
