@@ -51,20 +51,48 @@ setTimeout(function(){
 	var count = 0; 
 	var bkgColor = ['#adccff', '#edadff', '#b8e0a1', '#e0aba1'];
 	var colorChange = setInterval(function(){
+		//if((count<5) && (count===0)){count++;};
+		//else{count=0;};
 		document.getElementById('color-change').style.backgroundColor = bkgColor[count];
-		while(count>4){count++;};
+		console.log(bkgColor);
 		console.log(bkgColor[count]);
-		if(count===4){clearInterval(colorChange);}
 		}, 2000); 
 </script>
 <hr>
-<h3>Exercise 05: TBD</h3>
+<h3>Exercise 05: Create a countdown that goes from 10 to 0 with one second in between. Show current number in a div.</h3>
+<h4>Try #1</h4>
+<div id="number1"></div>
+<script> 
+var a = '';
+var b = setInterval(function(){
+	for(var i=0; i<10; i++){
+		a =+  '<p>The current number is '+i+'</p>';
+		if(i >10){clearInteval(c);}}), 2000);
+	document.getElementById('number1').innerHTML = a; 
+</script>
 
+<h4>Try #2</h4>
+<div id="number2"></div>
+<script>
+var zing = ''; 
+var xylo = function(){
+	for(var i=0; i<10; i++){
+		zing =+  '<div><p>The current number is '+i+'</p></div>';};}
+document.getElementById('number2').innerHTML = zing;
+</script>
 
+<h4>Try #4</h4>
+<div id="number3"></div>
+/*<script>
+var numbers = '';	
+for(var t=0; t<101; t++){
+	numbers += '<div id="add"><p>The varialble T is equal to '+t+'.</p></div>'
+};
+document.getElementById('number3').innerHTML = numbers;
+</script> */
 
 <hr>
-<h3>Exercise 06: TBD </h3>
-
+<h3>Exercise 06: TBD</h3>
 
 <hr>
 <!-- Example section -->
