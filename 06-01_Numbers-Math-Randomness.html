@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Get better control of your numbers – Math and randomness</h1>
+<br>
+<hr>
+<!-- Exercise section -->
+<h2>Exercise section</h2>
+<h3>Exercise 01: Rounding — Round 5.7 to 5</h3>
+<p>5.7 rounded down = <span id="show5"></span></p>
+<script> 
+var roundDown = Math.floor(5.7);
+document.getElementById('show5').innerHTML = roundDown;
+</script>
+
+<br>
+<hr>
+<h3>Exercise 02: Exponents — Raise 4 to the power of 3 using the Math object.</h3>
+<p>4 to the power of 3 = <span id="exponent"></span></p>
+<script>
+var exponent = Math.pow(4,3);
+document.getElementById('exponent').innerHTML = exponent;
+</script>
+
+<br>
+<hr>
+<h3>Exercise 03: Pick a random number</h3>
+<p>Version 01: Random integer between 0 to 9: <span id="rand1"></span></p>
+<script>
+	var randOne = Math.floor(9*Math.random())+1;
+	document.getElementById('rand1').innerHTML = randOne;
+</script>
+
+<p>Version 02: Random integer between 1 to 10: <span id="rand2"></span></p>
+<script>
+	var randTwo = Math.floor(10*Math.random())+1;
+	document.getElementById('rand2').innerHTML = randTwo;
+</script>
+
+<p>Version 03: Random integer between 3 to 8: <span id="rand3"></span></p>
+<script> 
+var rand8 = Math.floor(8*Math.random())+1; 
+var rand3 = Math.floor(3*Math.random())+3; 
+var randChoice = Math.max(rand8, rand3);
+document.getElementById('rand3').innerHTML = randChoice;
+</script>
+
+<br>
+<hr>
+<h3>Exercise 04: Pick a random name</h3>
+<p>The list of names that are available are <span id="names1"></span>. The randomly chosen name from this list is: <b><span id="chosen-name"></span></b></p>
+<button id="choose-btn">Pick a name</button>
+<script>
+var nameList = ['James', ' Linda', ' David', ' Lisa'];
+document.getElementById('names1').innerHTML = nameList;
+document.getElementById('choose-btn').onclick = function(){
+	var nameRand = Math.floor(4*Math.random()); 
+	console.log('NameList number = '+nameRand);
+	document.getElementById('chosen-name').innerHTML = nameList[nameRand];
+};
+</script>
+
+
+<br>
+<hr>
+<h3>Exercise 05: Pick a random image</h3>
+<button id="choose-img">See a random image</button>
+<div id="display-image"></div><br>
+<script> 
+var imageOptions = ['https://images.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500', 'https://images.pexels.com/photos/64272/blossom-bloom-flower-red-64272.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500', 'https://images.pexels.com/photos/373912/pexels-photo-373912.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500', 
+'https://images.pexels.com/photos/830891/pexels-photo-830891.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500', 
+'https://www.pexels.com/photo/agriculture-countryside-crop-cropland-259280/',
+'https://images.pexels.com/photos/459225/pexels-photo-459225.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+'https://images.pexels.com/photos/720609/pexels-photo-720609.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+'https://images.pexels.com/photos/378570/pexels-photo-378570.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'];
+document.getElementById('choose-img').onclick = function(){
+	var randImage = Math.floor(8*Math.random());
+	document.getElementById('display-image').innerHTML = '<img src='+imageOptions[randImage]+'style="width: 10px; height: auto;">';
+}
+</script>
+
+<br>
+<hr>
+<h3>Exercise 06: A practical select dropdown</h3>
+
+
+<br>
+<hr>
+<!-- Example section -->
+<h2>Example section</h2>
+<h3>Example 01: The Math object – Do more than just basic arithmetic</h3>
+<script>
+var power = Math.pow(5,2); // 5 to the power of 2
+var roundDown = Math.floor(6.52);
+var roundUp = Math.ceil(2.1);
+var roundToNearest = Math.round(2.4);
+var findLargest = Math.max(2, 403, 35, 5);
+var findSmallest = Math.min(2003, 1013, 1011, 1015);
+console.log(power);
+console.log(roundDown);
+console.log(roundUp);
+console.log(roundToNearest);
+console.log(findLargest);
+console.log(findSmallest);
+</script>
+
+<br>
+<hr>
+<h3>Example 02: Random numbers</h3>
+<script>
+var rand = Math.random();
+console.log('Random number: '+rand);
+</script>
+
+<br>
+<hr>
+<h3>Example 03: Get a random whole number between 1 and 10</h3>
+<script>
+var rand = Math.floor(10*Math.random()) + 1;
+console.log('See random whole number between 1 and 10: '+rand);
+</script>
+
+<hr>
+</body>
+</html>

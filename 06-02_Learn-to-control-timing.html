@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Level 6, Unit 2 | Learn to control timing</h1>
+
+
+<hr>
+<!-- Exercise section -->
+<h2>Exercise section</h2>
+<h3>Exercise 01: Type the following code to so you can do it without looking</h3>
+<p>setTimeout( function(){ console.log('hi');}, 5000);</p>
+<p>setTimeout(function(){ console.log('hi');}, 5000);</p>
+<p>setTimeout(function(){console.log('hi');}, 5000);</p>
+<p>setTimeout(function(){console.log('hi');}, 5000);</p>
+<p>setTimeout(function(){console.log('hi');}, 5000);</p>
+<p>setTimeout(function(){console.log('hi');}, 5000);</p>
+<p>setTimeout(function(){console.log('hi');}, 5000);</p>
+<p>setTimeout(function(){console.log('hi');}, 5000);</p>
+<p>setTimeout(function(){console.log('hi');}, 5000);</p>
+<p>setTimeout(function(){console.log('hi');}, 5000);</p>
+<p>setTimeout(function(){console.log('hi');}, 5000);</p>
+
+<hr>
+<h3>Exercise 02: Type the following code to so you can do it without looking</h3>
+<p>setInterval(function(){console.log('hi');}, 2000);</p>
+<p>setInterval(function(){}, 2000);</p>
+<p>setInterval(function(){}, 2000);</p>
+<p>setInterval(function(){}, 2000);</p>
+<p>setInterval(function(){}, 2000);</p>
+<p>setInterval(function(){}, 2000);</p>
+
+
+<hr>
+<h3>Exercise 03: Create an invisible div that appears after 5 seconds</h3>
+<div id="show-me" style="display:none;"><p>Now you see me</p></div>
+<script>
+setTimeout(function(){
+	document.getElementById('show-me').style.display = 'block';
+}, 5000);
+</script> 
+<hr>
+<h3>Exercise 04: Change div's background color every 2 seconds</h3>
+<div id="color-change" style="background-color: #FFFFFF"><p>Check out how my background changes every 2 seconds</p></div>
+<script>
+	var count = 0; 
+	var bkgColor = ['#adccff', '#edadff', '#b8e0a1', '#e0aba1'];
+	var colorChange = setInterval(function(){
+		//if((count<5) && (count===0)){count++;};
+		//else{count=0;};
+		document.getElementById('color-change').style.backgroundColor = bkgColor[count];
+		console.log(bkgColor);
+		console.log(bkgColor[count]);
+		}, 2000); 
+</script>
+<hr>
+<h3>Exercise 05: Create a countdown that goes from 10 to 0 with one second in between. Show current number in a div.</h3>
+<!--
+<h4>Try #1</h4>
+<div id="number1"></div>
+<script> 
+var a = '';
+var b = setInterval(function(){
+	for(var i=0; i<10; i++){
+		a =+  '<div><p>The current number is '+i+'</p></div>';
+		if(i<10){clearInterval(b)}), 2000)};};
+	document.getElementById('number1').innerHTML = a; 
+</script>
+-->
+
+<h4>Try #2</h4>
+<div id="number2"></div>
+<script>
+var a = ''; 
+var b = function(){
+	for(var i=10; i>10; i--){
+		a =+  '<div><p>The current number is '+i+'</p></div>';}};
+b(); 
+document.getElementById('number2').innerHTML = a;
+</script>
+
+<!--
+<h4>Try #4</h4>
+<div id="number3"></div>
+/*<script>
+var numbers = '';	
+for(var t=0; t<101; t++){
+	numbers += '<div id="add"><p>The varialble T is equal to '+t+'.</p></div>'
+};
+document.getElementById('number3').innerHTML = numbers;
+</script> */
+--> 
+<hr>
+<h3>Exercise 06: TBD</h3>
+
+<hr>
+<!-- Example section -->
+<h2>Example section</h2>
+<h3>Example 01: setTimeout() — Run some code after a delay</h3>
+<script>
+setTimeout( function(){console.log('hi');}, 5000);
+</script>
+
+<hr>
+<h3>Example 02: setInterval — Run some code repeatedly at timed intervals</h3>
+<script>
+console.log('Watch "Hi" repeatedly appear:');
+setInterval( function(){console.log('Hi');}, 2000);
+</script>
+
+
+<hr>
+<h3>Example 03: clearInterval() – Stop a setInterval() from running</h3>
+<script>
+var count = 0;
+var sayHi = setInterval(function(){
+	console.log('Current number: '+count);
+	count++;
+	if(count>9){
+		clearInterval(sayHi);
+	}
+}, 1000);
+</script>
+
+<hr>
+</body>
+</html>
