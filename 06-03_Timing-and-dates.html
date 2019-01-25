@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Level 6, Unit 3 | JavaScript dates and times</h1>
+
+
+<hr>
+<!-- Exercise section -->
+<h2>Exercise section</h2>
+<h3>Exercise 01: Show the current date in a div (no special formatting is required).</h3>
+<div id="date1"></div>
+<script>
+var d1 = new Date();
+document.getElementById('date1').innerHTML = '<p>The current date is: '+d1.getDay()+'-'+d1.getFullYear()+'-'+d1.getMonth()+'.</p>';
+console.log('The current date is: '+d1.getDay()+'-'+d1.getFullYear()+'-'+d1.getMonth());
+</script>
+
+<hr>
+<h3>Exercise 02: Get the current year, month (from 0 to 11), and date (from 1 to 31), and show them in a div.</h3>
+<div id="date2"></div>
+<script>
+var d2 = new Date();
+document.getElementById('date2').innerHTML = '<p>Today\'s month is: '+d2.getMonth()+'</p><p>Today\'s date is: '+d2.getDate()+'</p>'
+</script>
+
+<hr>
+<h3>Exercise 03: Days of the week:</h3>
+<ul>
+	<li>Create an array containing the names of the days of the week.</li>
+	<li>Get the current day as a number from 0 to 6.</li>
+	<li>Based on that number, get the correct day name from the array.</li>
+	<li>Show the correct day name in a div.</li>
+</ul>
+<div id="jsdate"></div>
+
+<div id="date-format"></div>
+
+<script>
+var d3 = new Date();
+document.getElementById('jsdate').innerHTML = '<p>The JavaScript date or day displayed in number format — and looks like this. Today\'s day, or number of the week, is: '+d3.getDay()+'.</p>';
+
+//Array for days of week
+var weekList = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']; 
+
+//Get number of the day into a variable
+var dayNum = d3.getDay(); 
+console.log('The date\'s displayed value in the var "dayNum = '+d3.getDay()); 
+console.log('The date\'s displayed as a day is = '+weekList[d3.getDay()]); 
+
+document.getElementById('date-format').innerHTML = '<p>Today\'s day based on the JavaScript number of <b>'+d3.getDay()+'</b> is <b>'+weekList[d3.getDay()]+'</b></p>'
+</script>
+
+<hr>
+<!-- Example section -->
+<h2>Example section</h2>
+<h3>Example 01: The Date Object</h3>
+<script>
+	var d = new Date();
+	console.log(d);
+</script>
+
+<script>
+var d = new Date('March 15 2015');
+console.log('New date set up: '+d)
+</script>
+
+<p><b>Get the current date and its parts</b></p>
+<script>
+var d = new Date();
+console.log(d.getDay()); // 0 to 6 (0 is Sunday)
+console.log(d.getDate()); // 1 to 31
+console.log(d.getMonth()); // 0 to 11 (0 is January)
+console.log(d.getFullYear()); 
+</script>
+
+<p><b>Set the date to 90 days from now</b></p>
+<script>
+var d = new Date();
+d.setDate(d.getDate()+90);
+console.log('The date 90 days from now is: '+d);
+</script>
+
+<hr>
+<h3>Example 02: Make date math easier — getTime() function</h3>
+<script>
+var d = new Date();
+console.log(d.getTime());
+</script>
+
+<hr>
+<h3>Example 03: TBD</h3>
+
+<hr>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Level 7 | Unit 1 | Intro to approaching bigger problems – Create a lightbox</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Level 7 | Unit 1 | Intro to approaching bigger problems – Create a lightbox</h1>
+
+<!-- Example section -->
+<h2>Example section</h2>
+<h3>Example: Build a light box</h3>
+<button id="show">Show lightbox</button>
+<div id="lightbox_container">
+	<div id="overlay"></div>
+	<div id="lightbox">
+		<div id="hide">[Hide]</div>
+		<p>Lightbox content here</p>
+	</div>
+</div>
+
+<script>
+/* 	- Basic div should show and hide
+		- We need a show button AND a hide button
+	- Should cover screen and be aligned properly
+	- Should hide when people click outside of it. 
+*/
+var lightbox = document.getElementById('lightbox_container');
+
+function showLightbox(){lightbox.style.display = 'block';}
+
+function hideLightbox(){lightbox.style.display = 'none';}
+
+document.getElementById('show').onclick = showLightbox;
+document.getElementById('hide').onclick = hideLightbox;
+document.getElementById('overlay').onclick = hideLightbox;
+</script>
+<!--
+<hr>-->
+<!-- Exercise section -->
+<!--
+<h2>Exercise section</h2>
+<h3>Exercise 01: TBD</h3>
+
+<hr>
+<h3>Exercise 02: TBD</h3>
+
+<hr>
+<h3>Exercise 03: TBD</h3>
+-->
+<hr>
+</body>
+</html>
