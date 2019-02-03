@@ -1,3 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Level 7 | Unit 1 | Intro to approaching bigger problems – Create a lightbox</title>
+	<meta charset="UTF-8">
+	
+</head>
+<body>
+<style>
 body{
 	padding-top: 10px;
 	padding-bottom: 5px;
@@ -9,13 +18,13 @@ body{
 }
 
 p{ 
-    padding-top: 10px;
+  padding-top: 10px;
 	padding-bottom: 5px;
 	font-family: sans-serif, arial, verdana;
 	font-style: normal;
 	font-weight: 500;
-	font-size: 17px;
-	line-height: 17px;
+	font-size: 18px;
+	line-height: 24px;
 }
 
 h1{
@@ -65,7 +74,7 @@ h4{
 	background: #eee;
 }
 
-.li, ul, ol{
+li, ul, ol{
 	padding-left: 30px;
 	padding-top: 5px;
 	padding-bottom: 5px;
@@ -76,34 +85,7 @@ h4{
 	line-height: 17px;
 }
 
-#mydiv{
-	transition: opacity 1s;
-}
-
-#mydiv2{
-	transition: color 2s;
-}
-
-#mydiv3{
-	display: inline-block;
-	padding: 30px;
-	transition: transform 0.2s;
-}
-#mydiv4{
-	transition: all 0.2s;
-}
-
-#magdiv{
-	font-family: sans-serif, arial, verdana;
-	background-color: darkolivegreen;
-	color:darkkhaki;
-	width: 100px;
-	height: 100px;
-	margin-bottom: 15px;
-	transition: all 0.2s;
-}
-
-.lightbox_container{
+#lightbox_container{
 	position: fixed;
 	text-align: center;
 	left: 0px;
@@ -113,7 +95,7 @@ h4{
 	display: none;
 }
 
-.lightbox{
+#lightbox{
 	width: 400px;
 	height: 300px;
 	background-color: #f8f7f3;
@@ -124,7 +106,7 @@ h4{
 	margin-top: 20px;
 }
 
-.overlay{
+#overlay{
 	background: rgba(33,33,33,0.8);
 	position: absolute;
 	left: 0px;
@@ -133,75 +115,38 @@ h4{
 	height: 100%;
 }
 
-.lightbox-container-two{
-	position: fixed;
-	text-align: center;
-	left: 0px;
-	top: 0px;
-	width: 100%;
-	height: 100%;
-	display: none;
-}
-
-.lightbox_two{
-	width: 400px;
-	height: 300px;
-	background-color: #f8f7f3;
-	border-radius: 5px;
-	padding: 20px;
-	position: relative;
-	display: inline-block;
-	margin-top: 20px;
-}
-
-.overlay_two{
-	background: rgba(33,33,33,0.8);
-	position: absolute;
-	left: 0px;
-	top: 0px;
-	width: 100%;
-	height: 100%;
-}
-
-.hide{
-	position: absolute;
-	top: 20px;
-	right: 20px;
+#hide{
+	position: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: crimson;
+	bottom: 10px;
 	cursor: pointer;
 }
+</style>
+<h1>Level 7 | Unit 1 | Excercise #04</h1>
 
-.accordion-open{
-	padding: 10px 10px 20px 10px;  
-	max-width: 90%;
-	height: 350px; 
-	background: #c4c4c4;
-	transition-duration: 100ms;
-}
+<button id="show-btn">show lightbox</button>
+<div id="lightbox_container">
+		<div id="overlay"></div>
+		<div id="lightbox">
+		<h2>Lightbox title</h2>
+		<p>This is lightbox that has text in it. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lorem quam, vulputate elementum massa ac, pellentesque mattis tellus. Aliquam euismod semper faucibus. Vestibulum at tincidunt lacus, sit amet consectetur quam.</p>
+		<div id="hide">[Close]</div>
+  </div>
+  </div>
 
-.accordion-closed{
-	padding: 10px 10px 20px 10px; 
-	height: 80px;
-	max-width: 90%;
-	background: #c4c4c4;
-	overflow: hidden; 
-}
+<!-- JavaScript below -->
 
-.open-btn{
-	font-size: 46px;
-	color: #615f5f;
-	text-decoration: bold;
-	padding-top: 0px;
-	display: block;
-	text-align-last: right;
-	cursor: pointer;
-}
+<script> 
+  var lightbox = document.getElementById('lightbox_container'); 
+  function showLightbox(){lightbox.style.display = 'block';}
+  function hideLightbox(){lightbox.style.display =  'none';}
+  document.getElementById('show-btn').onclick = showLightbox;
+  document.getElementById('hide').onclick = hideLightbox; 
+  document.getElementById('overlay').onclick = hideLightbox;
+</script>
 
-.close-btn{
-	font-size: 46px;
-	color: #615f5f;
-	text-decoration: bold;
-	padding-top: 0px;
-	display: none;
-	text-align: right;
-	cursor: pointer;
-}
+<hr>
+</body>
+</html>

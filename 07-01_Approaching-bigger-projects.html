@@ -13,10 +13,10 @@
 <h2>Example section</h2>
 <h3>Example: Build a light box</h3>
 <button id="show">Show lightbox</button>
-<div id="lightbox_container">
-	<div id="overlay"></div>
-	<div id="lightbox">
-		<div id="hide">[Hide]</div>
+<div id="lightbox_container" class="lightbox_container">
+	<div id="overlay" class="overlay"></div>
+	<div id="lightbox" class="lightbox">
+		<div id="hide" class="hide">[Hide]</div>
 		<p>Lightbox content here</p>
 	</div>
 </div>
@@ -37,19 +37,91 @@ document.getElementById('show').onclick = showLightbox;
 document.getElementById('hide').onclick = hideLightbox;
 document.getElementById('overlay').onclick = hideLightbox;
 </script>
-<!--
-<hr>-->
+
+<hr>
 <!-- Exercise section -->
-<!--
+
 <h2>Exercise section</h2>
-<h3>Exercise 01: TBD</h3>
-
-<hr>
-<h3>Exercise 02: TBD</h3>
-
-<hr>
-<h3>Exercise 03: TBD</h3>
+<h3>Exercise 01: Basic div that opens and closes</h3>
+<!--
+	A — [X] Accordion should be closed by default
+	B - [] When "Open" button is clicked div should make text appear.
+			-[] "Open" button should also disappear 
+			-[] "Close" button should appear. 
+	C - [] When "close" button is clicked div w/ text should disappear. 
+			-[] "Close" button should disappear.
+			-[] "Open" button should appear.
 -->
+<div id="acc" class="accordion-closed">
+	<div id="buttons">	
+		<span id="open" class="close-btn">-</span>
+		<span id="closed" class="open-btn">+</span>
+	</div>
+	<h2>My accordion title</h2>
+	
+	<p>This is an accordion that has text in it. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lorem quam, vulputate elementum massa ac, pellentesque mattis tellus. Aliquam euismod semper faucibus. Vestibulum at tincidunt lacus, sit amet consectetur quam.</p>
+</div>
+<script> 
+var isAccOpen = 0;
+document.getElementById('acc').onclick = function(){
+	if (isAccOpen === 0){
+		document.getElementById('acc').className = 'accordion-open';
+		document.getElementById('closed').className = 'close-btn';
+		document.getElementById('open').className = 'open-btn';
+		isAccOpen = 1;}
+	else{
+		document.getElementById('acc').className = 'accordion-closed';
+		document.getElementById('closed').className = 'open-btn';
+		document.getElementById('open').className = 'close-btn';
+		isAccOpen = 0;}}
+</script>
+<script>
+/* 
+If the click is on the buttons: 
+	- Determine the value of the button displaying…
+		- if the value is 1 = open/+ button is showing
+		- if the value is 0 = hide/- button is visible. 
+	-If the value is 0:
+		- Hide the "open"/"+" button
+		- Show the "closed"/"-" button
+	-If the value is 1:
+		- Hide the "closed"/"-" button
+		- Show the "open"/"+" button
+*/
+var buttonValue = 0; 
+document.getElementById('buttons').onclick = function(){
+	if (buttonValue === 0){
+		document.getElementById('acc').className = 'accordion-open';
+		document.getElementById('closed').className = 'close-btn';
+		document.getElementById('open').className = 'open-btn';
+		buttonValue = 1;}
+	else{
+		document.getElementById('acc').className = 'accordion-closed';
+		document.getElementById('closed').className = 'open-btn';
+		document.getElementById('open').className = 'close-btn';
+		buttonValue = 0;}}
+</script>
+
+<hr>
+<h3>Exercise 02: Take your div from the previous quesiton and style it to look more like a lightbox.</h3>
+<button id="show-btn">show lightbox</button>
+<div id="lightbox-container-two" class="lightbox-container-two">
+		<div id="overlay-two" class="overlay_two"></div>
+		<div id="lightbox-two" class="lightbox_two">
+		<div id="hide-two" class="hide">[Hide]</div>
+		<h3>Lightbox title</h3>
+		<p>This is lightbox that has text in it. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lorem quam, vulputate elementum massa ac, pellentesque mattis tellus. Aliquam euismod semper faucibus. Vestibulum at tincidunt lacus, sit amet consectetur quam.</p>
+	</div>
+</div>
+<script>
+var lightboxTwo = document.getElementById('lightbox-container-two');	
+function showLightbox(){lightboxTwo.style.display = 'block'};
+function hideLightbox(){lightboxTwo.style.display = 'none'};
+document.getElementById('show-btn').onclick = showLightbox; 
+document.getElementById('hide-two').onclick = hideLightbox; 
+document.getElementById('overlay-two').onclick = hideLightbox; 
+</script>
+
 <hr>
 </body>
 </html>
