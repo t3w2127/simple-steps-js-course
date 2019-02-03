@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Level 7 | Unit 1 | Intro to approaching bigger problems – Create a lightbox</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Level 7 | Unit 2 | Creating a price calculator</h1>
+
+<!-- Example section -->
+<h2>Example section</h2>
+<!--
+	* Goal: let user select options, then show price
+	* Handle the price:
+		- We can store it in variable
+		- the price should change when an option is clicked
+	* Handling the options:
+		- Use checkboxes for options that can all be added
+		- Use radio button where user can only select one
+		- Data can be stored in an object
+	* Handling the display:
+		- We want to show a list of selections, not just price
+-->
+<form id="carform" autocomplete="off">
+	<label>
+		<input id="sunroof" type="checkbox" value="1000" data-itemname="Sunroof">
+		Sunroof: $1,000
+	</label>
+	<label>
+		<input id="gps" type="checkbox" value="5000" data-itemname="Built-in GPS">
+		Built-in GPS: $5,000
+	</label>
+</form>
+<div>
+	<p>Your added options:</p>
+	<div id="selections"></div>
+	<p>Total price: <span id="price"></span></p>
+</div>
+
+<script>
+//Start the price at 20,000 and show it
+var price = 20000;
+document.getElementById('price').innerHTML = price;
+
+/*
+//when user clicks sunroof, handle it properly
+document.getElementById('sunroof').onclick = handleOption;
+
+//When user clicks GPS, handle it properly
+document.getElementById('gps').onclick = handleOption; 
+*/
+
+// Use the loop below to pull in price data rather than having to constantly update the JS each time you add new options to the existing list(like the above commented out text):
+var options = document.getElementById('carform').querySelectorAll('input');
+for(var i=0; i<options.length; i++){
+	options[i].onclick = handleOption;
+	}
+
+// Show user's selections
+function showSelections(){
+	// start with an empty list
+	var list = [];
+
+	// find each checked option in our form
+	var checkedOnes = document.getElementById('carform').querySelectorAll('input:checked');
+
+	// For each checked option, get the item name and put it on the list
+	for(var i=0; i<checkedOnes.length; i++){
+		var itemname = checkedOnes[i].getAttribute('data-itemname');
+		list.push(itemname);
+	}
+
+	// show the completed list
+	document.getElementById('selections').innerHTML = list.join('<br>');
+}
+
+//when user clicks an option…
+function handleOption(){
+
+	//convert value from string to a number
+	var itemPrice = Number(this.value);
+
+	// if checked, add to total price
+	if(this.checked){
+		price += itemPrice;
+	}
+	// otherwise, subtract from total price
+	else{
+		price -= itemPrice;
+	}
+
+	showSelections();
+
+	// Show price
+	document.getElementById('price').innerHTML = price;
+}
+
+</script>
+
+
+<hr>
+<!-- Exercise section -->
+
+<h2>Exercise section</h2>
+<h3>Excercise #1 | Create a checkbox that updates and displays a price</h3>
+<!-- My form should:
+	1) display a price 
+	2) Display option for additional RAM
+		a) The option is a checkbox
+		b) When chosen the price updates adds to the total.
+		c) If the option is chosen, but then removed, the price of the RAM is removed from the total. 
+-->
+<h4>Add additional items to your MacBook Pro</h4>
+<form id="mb-options" autocomplete="off">
+	<label>
+		<input id="ram" type="checkbox" value="250" data-itemname="8 GB SSD RAM">
+		8 GB additional SSD RAM: $250
+	</label>
+	<br>
+	<label>
+		<input id="kb" type="checkbox" value="129" data-itemname="Wireless Keyboard">
+		Wireless keyboard: $129
+	</label>
+	<br>
+	<label>
+		<input id="tp" type="checkbox" value="79" data-itemname="Trackpad">
+		Trackpad: $79
+	</label>
+	<br>
+	<label>
+		<input id="4k" type="checkbox" value="2400" data-itemname="27inch UHD-4K Monitor">
+		27" UHD-4K Monitor: $2400
+	</label>
+	<br>
+	<label>
+		<input id="speakers" type="checkbox" value="500" item-dataname="Harmon/Kardon Bluetooth Speakers">
+		Harmon/Kardon Bluetooth Speakers: $500
+	</label>
+</form>
+<hr>
+<p>Additions to the purchase of your MacBook Pro:</p>
+<p><span id="add-ons"></span></p>
+<hr>
+<p>Total cost of your MacBook Pro = $<span id="mac-price"></span></p>
+
+<script> 
+var mbPrice = 1100; 
+document.getElementById('mac-price').innerHTML = mbPrice; 
+
+var itemPrices = document.getElementById('mb-options').querySelectorAll('input');
+for(var i=0; i<itemPrices.length; i++){
+	itemPrices[i].onclick = handleOptions;
+}
+
+//document.getElementById('ram').onclick = handleOptions; 
+function getOptions(){
+	var options = [];
+	var selectedOptions = document.getElementById('mb-options').querySelectorAll('input:checked');
+
+	// For each checked option, get the item name and put it on the list
+	for(i=0; i<selectedOptions.length; i++){
+		var addOn = selectedOptions[i].getAttribute('data-itemname');
+		options.push(addOn);
+	}
+	// show the completed list
+	document.getElementById('add-ons').innerHTML = options.join('<br>');
+}
+
+
+function handleOptions(){
+	var ramPrice = Number(this.value);
+	if(this.checked){mbPrice += ramPrice;}
+	else{mbPrice-=ramPrice;}
+	getOptions();
+	document.getElementById('mac-price').innerHTML = mbPrice;
+}
+</script>
+<hr>
+</body>
+</html>
