@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Level 7 | Unit 1 | Intro to approaching bigger problems – Create a lightbox</title>
+	<meta charset="UTF-8">
+	
+</head>
+<body>
+
+	<!--BEGIN STYLE SHEET-->
+
+<style>
+body{
+	padding-top: 10px;
+	padding-bottom: 5px;
+	font-family: sans-serif, arial, verdana;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 17px;
+	line-height: 17px;
+}
+
+p{ 
+  padding-top: 10px;
+	padding-bottom: 5px;
+	font-family: sans-serif, arial, verdana;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 24px;
+	color: rgb(48, 48, 48)
+}
+
+h1{
+	padding-top: 30px;
+	line-height: 35px;
+    font-family: sans-serif, arial, verdana;
+    font-size: 28px;
+    color: #2a8391;
+}
+
+h2{
+    padding-top: 30px;
+    font-family: sans-serif, arial, verdana;
+    font-size: 24px;
+    color: #486d26;
+}
+
+h3{
+    padding-top: 30px;
+    font-family: sans-serif, arial, verdana;
+	font-size: 20px;
+	color: #8525c5;
+}
+
+h4{
+    padding-top: 30px;
+    font-family: sans-serif, arial, verdana;
+    font-size: 18px;
+}
+
+#form_container{
+	position: fixed;
+	text-align: center;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	display: none;
+}
+
+#signup_lightbox{
+	width: 400px;
+	height: 300px;
+	background:rgb(236, 235, 235);
+	border-radius: 10px;
+	padding: 20px;
+	position: relative;
+	display: inline-block;
+	margin-top: 20px;
+}
+
+#overlay{
+	background: rgba(128, 128, 128, 0.5);
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+}
+
+#close{
+	padding-top: 30px;
+	color: crimson;
+	font-size: 18px;
+	font-weight: 800;
+	cursor: pointer;
+}
+</style>
+	
+	<!--END STYLE SHEET-->
+
+<h1>Level 7 | Unit 1 | Excercise #04 v02 (from scratch)</h1>
+<h2>Create a lightbox from scratch</h2>
+<!--
+	Lightbox-like elements:
+		* Button to open display form
+		* Style for form area
+		* Overlay/background color
+		* Button to close form/lightbox
+	Email sign up form: needed elements
+		* Form elements [Name, email]
+		* Submit button which closes the form/lightbox
+-->
+<div id="sign-up"><button>Sign up for our newsletter</button></div>
+<div id="form_container">
+	<div id="overlay">
+		<div id="signup_lightbox">
+			<h3>Email sign up form</h3>
+			<form>
+			<p>Your First and Last name:</p>
+			<input id="name">
+			<p>Your email address</p>
+			<input>
+			</form>
+			<div id="close">[Close]</div>
+		</div>
+	</div>
+</div>
+
+<!-- JavaScript below -->
+
+<script>
+var signupFormContainer = document.getElementById('form_container');
+function showSignup(){signupFormContainer.style.display = 'block';}
+function hideSignup(){signupFormContainer.style.display = 'none';}
+document.getElementById('sign-up').onclick = showSignup;
+document.getElementById('close').onclick = hideSignup;
+document.getElementById('overlay').onclick = hideSignup;
+</script>
+
+<hr>
+</body>
+</html>
